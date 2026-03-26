@@ -1,0 +1,1362 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>西班牙语语法 A1–B2</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#ffffff;--bg2:#f8f7f3;--bg3:#f1efe8;
+  --text:#1a1a18;--text2:#5a5854;--text3:#888780;
+  --border:#e0ddd5;--border2:#d0cec4;
+  --blue-bg:#e6f1fb;--blue-text:#0c447c;--blue-border:#185fa5;
+  --green-bg:#eaf3de;--green-text:#27500a;--green-border:#3b6d11;
+  --amber-bg:#faeeda;--amber-text:#633806;--amber-border:#854f0b;
+  --coral-bg:#faece7;--coral-text:#712b13;--coral-border:#993c1d;
+  --red-bg:#fcebeb;--red-text:#791f1f;--red-border:#a32d2d;
+  --teal-bg:#e1f5ee;--teal-text:#085041;--teal-border:#0f6e56;
+  --note-bg:#e6f1fb;--note-text:#0c447c;--note-border:#185fa5;
+  --tip-bg:#eaf3de;--tip-text:#27500a;--tip-border:#3b6d11;
+  --warn-bg:#faeeda;--warn-text:#633806;--warn-border:#854f0b;
+  --imp-bg:#fcebeb;--imp-text:#791f1f;--imp-border:#a32d2d;
+  --cau-bg:#faeeda;--cau-text:#633806;--cau-border:#854f0b;
+  --sidebar-w:230px;
+  --font:system-ui,-apple-system,'Segoe UI','PingFang SC','Microsoft YaHei',sans-serif;
+  --mono:'SF Mono','Fira Code','Consolas',monospace;
+}
+@media(prefers-color-scheme:dark){
+  :root{
+    --bg:#1a1a18;--bg2:#242422;--bg3:#2a2a28;
+    --text:#e8e6de;--text2:#a8a69e;--text3:#6b6963;
+    --border:#38382e;--border2:#48483e;
+    --blue-bg:#042c53;--blue-text:#85b7eb;--blue-border:#185fa5;
+    --green-bg:#173404;--green-text:#c0dd97;--green-border:#3b6d11;
+    --amber-bg:#412402;--amber-text:#fac775;--amber-border:#854f0b;
+    --coral-bg:#4a1b0c;--coral-text:#f0997b;--coral-border:#993c1d;
+    --red-bg:#501313;--red-text:#f09595;--red-border:#a32d2d;
+    --teal-bg:#04342c;--teal-text:#9fe1cb;--teal-border:#0f6e56;
+    --note-bg:#042c53;--note-text:#85b7eb;--note-border:#185fa5;
+    --tip-bg:#173404;--tip-text:#c0dd97;--tip-border:#3b6d11;
+    --warn-bg:#412402;--warn-text:#fac775;--warn-border:#854f0b;
+    --imp-bg:#501313;--imp-text:#f09595;--imp-border:#a32d2d;
+    --cau-bg:#412402;--cau-text:#fac775;--cau-border:#854f0b;
+  }
+}
+body{font-family:var(--font);background:var(--bg);color:var(--text);font-size:14px;line-height:1.6}
+.app{display:flex;height:100vh;overflow:hidden}
+.sidebar{width:var(--sidebar-w);flex-shrink:0;border-right:1px solid var(--border);background:var(--bg2);display:flex;flex-direction:column;overflow:hidden}
+.sidebar-header{padding:14px 16px 10px;border-bottom:1px solid var(--border);flex-shrink:0}
+.sidebar-header h1{font-size:13px;font-weight:600;color:var(--text);letter-spacing:.01em}
+.sidebar-header p{font-size:11px;color:var(--text3);margin-top:2px}
+.level-tabs{display:flex;gap:4px;padding:10px 12px;flex-shrink:0}
+.lt{flex:1;padding:5px 4px;border-radius:8px;border:1px solid var(--border);background:transparent;color:var(--text2);font-size:11px;cursor:pointer;font-weight:500;transition:all .15s;text-align:center;line-height:1.4}
+.lt.on{background:var(--text);color:var(--bg);border-color:var(--text)}
+.search-wrap{padding:6px 12px 4px;flex-shrink:0}
+.search-wrap input{width:100%;padding:5px 10px;border-radius:7px;border:1px solid var(--border);background:var(--bg3);color:var(--text);font-size:12px;outline:none;font-family:var(--font)}
+.search-wrap input::placeholder{color:var(--text3)}
+.sec-list{flex:1;overflow-y:auto;padding:4px 0 16px}
+.sec-list::-webkit-scrollbar{width:4px}
+.sec-list::-webkit-scrollbar-thumb{background:var(--border2);border-radius:2px}
+.sec-item{display:flex;align-items:center;gap:7px;padding:5px 14px;cursor:pointer;color:var(--text2);font-size:12px;line-height:1.45;border-left:2px solid transparent;transition:all .12s}
+.sec-item:hover{background:var(--bg3);color:var(--text)}
+.sec-item.on{background:var(--bg3);border-left-color:var(--text);color:var(--text);font-weight:500}
+.sec-item.hidden{display:none}
+.sec-num{font-size:10px;color:var(--text3);flex-shrink:0;min-width:26px;font-variant-numeric:tabular-nums}
+.main{flex:1;overflow-y:auto;background:var(--bg)}
+.main::-webkit-scrollbar{width:6px}
+.main::-webkit-scrollbar-thumb{background:var(--border2);border-radius:3px}
+.content{max-width:820px;margin:0 auto;padding:28px 36px 80px}
+.sec-title{font-size:20px;font-weight:600;color:var(--text);margin-bottom:4px;line-height:1.3}
+.sec-sub{font-size:13px;color:var(--text3);margin-bottom:10px;font-style:italic}
+.sec-tags{display:flex;flex-wrap:wrap;gap:5px;margin-bottom:20px}
+.tag{font-size:10.5px;padding:2px 8px;border-radius:10px;font-weight:500;background:var(--bg3);color:var(--text3);border:1px solid var(--border)}
+.tag.nivel{background:var(--blue-bg);color:var(--blue-text);border-color:var(--blue-border)}
+.tag.tema{background:var(--bg3);color:var(--text2);border-color:var(--border2)}
+h3{font-size:14px;font-weight:600;color:var(--text);margin:18px 0 8px}
+h3:first-child{margin-top:0}
+p{font-size:13.5px;color:var(--text2);margin-bottom:8px;line-height:1.65}
+table{width:100%;border-collapse:collapse;font-size:13px;margin:8px 0 14px}
+th{font-weight:600;text-align:left;padding:6px 10px;border-bottom:2px solid var(--border2);color:var(--text2);font-size:11.5px;background:var(--bg2)}
+td{padding:5px 10px;border-bottom:1px solid var(--border);color:var(--text);vertical-align:top;line-height:1.5}
+tr:last-child td{border-bottom:none}
+tr:hover td{background:var(--bg2)}
+code{font-family:var(--mono);font-size:12px;background:var(--bg3);border:1px solid var(--border);border-radius:4px;padding:1px 5px;color:var(--text)}
+pre{font-family:var(--mono);font-size:12.5px;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:14px 16px;margin:8px 0 14px;color:var(--text);line-height:1.7;white-space:pre-wrap;word-break:break-word}
+.chips{display:flex;flex-wrap:wrap;gap:5px;margin:6px 0 12px}
+.chip{font-size:11.5px;padding:2px 9px;border-radius:6px;background:var(--bg2);border:1px solid var(--border);color:var(--text2);font-family:var(--mono)}
+strong{font-weight:600;color:var(--text)}
+em{color:var(--text2);font-style:italic}
+hr{border:none;border-top:1px solid var(--border);margin:20px 0}
+.xref{font-size:12px;color:var(--blue-text);opacity:.85;margin:4px 0 10px;font-style:italic}
+.callout{border-radius:8px;padding:10px 14px;margin:10px 0 14px;font-size:13px;line-height:1.6;border-left:3px solid}
+.callout-title{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;margin-bottom:5px;opacity:.7}
+.cn{background:var(--note-bg);border-color:var(--note-border);color:var(--note-text)}
+.ct{background:var(--tip-bg);border-color:var(--tip-border);color:var(--tip-text)}
+.cw{background:var(--warn-bg);border-color:var(--warn-border);color:var(--warn-text)}
+.ci{background:var(--imp-bg);border-color:var(--imp-border);color:var(--imp-text)}
+.cc{background:var(--cau-bg);border-color:var(--cau-border);color:var(--cau-text)}
+.callout pre{background:rgba(0,0,0,.08);border:none;border-radius:4px;padding:8px 10px;font-size:12px;margin:6px 0 0}
+.badge{display:inline-block;font-size:11px;padding:2px 9px;border-radius:10px;font-weight:600;margin-right:4px}
+.ba1{background:var(--teal-bg);color:var(--teal-text)}
+.ba2{background:var(--green-bg);color:var(--green-text)}
+.bb1{background:var(--amber-bg);color:var(--amber-text)}
+.bb2{background:var(--coral-bg);color:var(--coral-text)}
+.hi{color:var(--blue-text);font-weight:600}
+.ok{color:var(--green-text);font-weight:600}
+.err{color:var(--red-text)}
+.wt{color:var(--amber-text);font-weight:600}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:8px 0 14px}
+.two-col .card{background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:12px 14px}
+.two-col .card h4{font-size:12.5px;font-weight:600;margin-bottom:8px;color:var(--text)}
+</style>
+</head>
+<body>
+<div class="app">
+<div class="sidebar">
+  <div class="sidebar-header">
+    <h1>西班牙语语法精要</h1>
+    <p>A1 → B2 · 中文导航版</p>
+  </div>
+  <div class="level-tabs">
+    <button class="lt on" onclick="switchLevel('a1',this)"><span class="badge ba1">A1</span><br>入门</button>
+    <button class="lt" onclick="switchLevel('a2',this)"><span class="badge ba2">A2</span><br>基础</button>
+    <button class="lt" onclick="switchLevel('b1',this)"><span class="badge bb1">B1</span><br>中级</button>
+    <button class="lt" onclick="switchLevel('b2',this)"><span class="badge bb2">B2</span><br>中高级</button>
+  </div>
+  <div class="search-wrap">
+    <input id="search" type="text" placeholder="搜索章节…" oninput="filterSecs(this.value)">
+  </div>
+  <div class="sec-list" id="sec-list"></div>
+</div>
+<div class="main">
+  <div class="content" id="content"></div>
+</div>
+</div>
+
+<script>
+const SECTIONS = {
+a1:[
+{id:'a1-1',title:'名词的性与数',sub:'género · número · concordancia',tags:['sustantivos'],html:`
+<h3>性别规律</h3>
+<table><tr><th>规律</th><th>阳性示例</th><th>阴性示例</th></tr>
+<tr><td>典型词尾 <code>-o / -a</code></td><td>el niñ<strong class="hi">o</strong>, el libr<strong class="hi">o</strong></td><td>la niñ<strong class="hi">a</strong>, la mes<strong class="hi">a</strong></td></tr>
+<tr><td><code>-ión / -ción / -sión</code></td><td>—</td><td>la canción, la nación, la televisión</td></tr>
+<tr><td><code>-dad / -tad / -tud</code></td><td>—</td><td>la ciudad, la libertad, la virtud</td></tr>
+<tr><td><code>-ema / -ama / -ma</code></td><td>el problema, el programa, el idioma</td><td>—</td></tr>
+<tr><td>職业同形词</td><td>el estudiante, el artista</td><td>la estudiante, la artista</td></tr>
+</table>
+<div class="callout cw"><div class="callout-title">⚠ 例外</div>
+<strong>el agua</strong>（阴性但用el，因以重读 a- 开头） · <strong>la mano</strong>（-o结尾但阴性） · <strong>el día / el mapa / el sofá</strong>（-a结尾但阳性）</div>
+<h3>复数变化规则</h3>
+<table><tr><th>词尾</th><th>规则</th><th>例</th></tr>
+<tr><td>元音结尾</td><td>+ <strong>s</strong></td><td>casa → <strong>casas</strong>, libro → <strong>libros</strong></td></tr>
+<tr><td>辅音结尾</td><td>+ <strong>es</strong></td><td>ciudad → <strong>ciudades</strong>, papel → <strong>papeles</strong></td></tr>
+<tr><td><code>-z</code> 结尾</td><td>z → c + <strong>es</strong></td><td>luz → <strong>luces</strong>, voz → <strong>voces</strong></td></tr>
+<tr><td><code>-s</code>（末音节重读）</td><td>+ <strong>es</strong></td><td>mes → <strong>meses</strong>, autobús → <strong>autobuses</strong></td></tr>
+<tr><td><code>-s</code>（末音节非重读）</td><td>不变</td><td>lunes → <strong>lunes</strong>, crisis → <strong>crisis</strong></td></tr>
+</table>
+<h3>形容词与冠词的一致性（Concordancia）</h3>
+<p>冠词和形容词必须与名词在<strong>性</strong>和<strong>数</strong>上一致：</p>
+<pre>el libro interesante → los libros interesantes
+la casa bonita      → las casas bonitas
+un chico alto       → unos chicos altos
+una chica alta      → unas chicas altas</pre>
+<div class="callout cn"><div class="callout-title">注意</div>形容词放在名词<strong>后</strong>（描述性）或<strong>前</strong>（感情色彩）：<br><em>un hombre pobre</em>（没钱）vs. <em>un pobre hombre</em>（可怜的人）</div>`},
+
+{id:'a1-2',title:'冠词（定/不定/缩合）',sub:'artículo determinado · indeterminado · contracto',tags:['articulos'],html:`
+<h3>定冠词 / 不定冠词对照</h3>
+<table><tr><th></th><th>定冠词（特指）</th><th>不定冠词（泛指/首次）</th></tr>
+<tr><td>阳性单数</td><td><strong class="hi">el</strong></td><td><strong class="hi">un</strong></td></tr>
+<tr><td>阴性单数</td><td><strong class="hi">la</strong></td><td><strong class="hi">una</strong></td></tr>
+<tr><td>阳性复数</td><td><strong class="hi">los</strong></td><td><strong class="hi">unos</strong></td></tr>
+<tr><td>阴性复数</td><td><strong class="hi">las</strong></td><td><strong class="hi">unas</strong></td></tr>
+<tr><td>中性</td><td><strong class="hi">lo</strong></td><td>—</td></tr>
+</table>
+<pre>lo + adjetivo → lo importante（重要的事）, lo bueno, lo difícil</pre>
+<h3>缩合冠词（Artículos contractos）— 仅两个</h3>
+<pre>a  + el = <strong>AL</strong>   → Voy al mercado. / Llego al aeropuerto.
+de + el = <strong>DEL</strong>  → Vengo del parque. / Es el libro del profesor.</pre>
+<div class="callout cc"><div class="callout-title">⚠ 注意</div>代词 <strong>él</strong>（他）不缩合：<em>Habló de <strong>él</strong>.</em>（谈到了他）</div>
+<h3>hay + 不定冠词 + 名词</h3>
+<p>表示"有……"时，hay 后必须接<strong>不定冠词</strong>或<strong>数词</strong>，不用定冠词：</p>
+<pre>Hay <strong>un</strong> banco cerca.          （附近有一家银行）
+Hay <strong>unas</strong> flores bonitas.     （有一些漂亮的花）
+Hay <strong>tres</strong> personas aquí.     （这里有三个人）
+<span class="err">✗ Hay el banco cerca.</span>          （错误：不用定冠词）</pre>
+<h3>省略不定冠词的情况</h3>
+<pre>职业（无修饰）：Soy médico. / Es profesora.
+  ← 但有形容词时保留：Es un <strong>buen</strong> médico.
+否定句：No tengo <strong>coche</strong>. / No hay <strong>tiempo</strong>.
+con/sin：Vino con <strong>paraguas</strong>. / Salió sin <strong>abrigo</strong>.</pre>`},
+
+{id:'a1-3',title:'现在时：规则与不规则',sub:'presente de indicativo · irregularidades',tags:['verbos','presente'],html:`
+<h3>规则变位（三类）</h3>
+<table><tr><th>人称</th><th>-AR hablar</th><th>-ER comer</th><th>-IR vivir</th></tr>
+<tr><td>yo</td><td><strong class="hi">hablo</strong></td><td><strong class="hi">como</strong></td><td><strong class="hi">vivo</strong></td></tr>
+<tr><td>tú</td><td>hablas</td><td>comes</td><td>vives</td></tr>
+<tr><td>él/ella/usted</td><td>habla</td><td>come</td><td>vive</td></tr>
+<tr><td>nosotros</td><td>hablamos</td><td>comemos</td><td>vivimos</td></tr>
+<tr><td>vosotros</td><td>habláis</td><td>coméis</td><td>vivís</td></tr>
+<tr><td>ellos/ustedes</td><td>hablan</td><td>comen</td><td>viven</td></tr>
+</table>
+<h3>不规则类型一：元音变化 e→ie（二合元音）</h3>
+<p>除 nosotros/vosotros 外，词根中的 e 变为 ie：</p>
+<table><tr><th>动词</th><th>yo</th><th>tú</th><th>él</th><th>nosotros</th><th>ellos</th></tr>
+<tr><td>querer（想要）</td><td>qu<strong class="hi">ie</strong>ro</td><td>qu<strong class="hi">ie</strong>res</td><td>qu<strong class="hi">ie</strong>re</td><td>queremos</td><td>qu<strong class="hi">ie</strong>ren</td></tr>
+<tr><td>preferir（更喜欢）</td><td>pref<strong class="hi">ie</strong>ro</td><td>pref<strong class="hi">ie</strong>res</td><td>pref<strong class="hi">ie</strong>re</td><td>preferimos</td><td>pref<strong class="hi">ie</strong>ren</td></tr>
+<tr><td>empezar（开始）</td><td>emp<strong class="hi">ie</strong>zo</td><td>emp<strong class="hi">ie</strong>zas</td><td>emp<strong class="hi">ie</strong>za</td><td>empezamos</td><td>emp<strong class="hi">ie</strong>zan</td></tr>
+<tr><td>entender（理解）</td><td>ent<strong class="hi">ie</strong>ndo</td><td>ent<strong class="hi">ie</strong>ndes</td><td>ent<strong class="hi">ie</strong>nde</td><td>entendemos</td><td>ent<strong class="hi">ie</strong>nden</td></tr>
+</table>
+<h3>不规则类型二：元音变化 o→ue</h3>
+<table><tr><th>动词</th><th>yo</th><th>tú</th><th>él</th><th>nosotros</th><th>ellos</th></tr>
+<tr><td>poder（能够）</td><td>p<strong class="hi">ue</strong>do</td><td>p<strong class="hi">ue</strong>des</td><td>p<strong class="hi">ue</strong>de</td><td>podemos</td><td>p<strong class="hi">ue</strong>den</td></tr>
+<tr><td>volver（回来）</td><td>v<strong class="hi">ue</strong>lvo</td><td>v<strong class="hi">ue</strong>lves</td><td>v<strong class="hi">ue</strong>lve</td><td>volvemos</td><td>v<strong class="hi">ue</strong>lven</td></tr>
+<tr><td>dormir（睡觉）</td><td>d<strong class="hi">ue</strong>rmo</td><td>d<strong class="hi">ue</strong>rmes</td><td>d<strong class="hi">ue</strong>rme</td><td>dormimos</td><td>d<strong class="hi">ue</strong>rmen</td></tr>
+<tr><td>encontrar（找到）</td><td>enc<strong class="hi">ue</strong>ntro</td><td>enc<strong class="hi">ue</strong>ntras</td><td>enc<strong class="hi">ue</strong>ntra</td><td>encontramos</td><td>enc<strong class="hi">ue</strong>ntran</td></tr>
+</table>
+<h3>不规则类型三：yo 第一人称特殊形式</h3>
+<table><tr><th>动词</th><th>yo</th><th>resto（规则）</th></tr>
+<tr><td>hacer（做）</td><td><strong class="hi">hago</strong></td><td>haces, hace, hacemos…</td></tr>
+<tr><td>poner（放）</td><td><strong class="hi">pongo</strong></td><td>pones, pone, ponemos…</td></tr>
+<tr><td>salir（出去）</td><td><strong class="hi">salgo</strong></td><td>sales, sale, salimos…</td></tr>
+<tr><td>traer（带来）</td><td><strong class="hi">traigo</strong></td><td>traes, trae, traemos…</td></tr>
+<tr><td>ver（看）</td><td><strong class="hi">veo</strong></td><td>ves, ve, vemos…</td></tr>
+<tr><td>saber（知道）</td><td><strong class="hi">sé</strong></td><td>sabes, sabe, sabemos…</td></tr>
+<tr><td>conocer（认识）</td><td><strong class="hi">conozco</strong></td><td>conoces, conoce, conocemos…</td></tr>
+</table>
+<h3>完全不规则（必背）</h3>
+<table><tr><th>动词</th><th>yo</th><th>tú</th><th>él</th><th>nosotros</th><th>vosotros</th><th>ellos</th></tr>
+<tr><td>ser（是）</td><td>soy</td><td>eres</td><td>es</td><td>somos</td><td>sois</td><td>son</td></tr>
+<tr><td>estar（在/estado）</td><td>estoy</td><td>estás</td><td>está</td><td>estamos</td><td>estáis</td><td>están</td></tr>
+<tr><td>ir（去）</td><td>voy</td><td>vas</td><td>va</td><td>vamos</td><td>vais</td><td>van</td></tr>
+<tr><td>tener（有/年龄）</td><td>tengo</td><td>tienes</td><td>tiene</td><td>tenemos</td><td>tenéis</td><td>tienen</td></tr>
+<tr><td>venir（来）</td><td>vengo</td><td>vienes</td><td>viene</td><td>venimos</td><td>venís</td><td>vienen</td></tr>
+</table>
+<h3>现在时用法</h3>
+<table><tr><th>用法</th><th>例句</th></tr>
+<tr><td>当前状态</td><td><em>Tengo hambre. / Estoy cansado.</em></td></tr>
+<tr><td>日常习惯</td><td><em>Trabajo de 9 a 5. / Como a las dos.</em></td></tr>
+<tr><td>普遍真理</td><td><em>El sol sale por el este.</em></td></tr>
+<tr><td>询问/自我介绍</td><td><em>¿Dónde trabajas? / ¿Cuántos años tienes?</em></td></tr>
+</table>`},
+
+{id:'a1-4',title:'ser / estar / tener / llevar',sub:'usos y contraste',tags:['verbos','ser-estar'],html:`
+<h3>SER — 本质、永久特征</h3>
+<table><tr><th>用法</th><th>例句</th></tr>
+<tr><td>身份/职业</td><td><em>Soy estudiante. / Es médico.</em></td></tr>
+<tr><td>国籍/来源</td><td><em>Soy chino. / Somos de Madrid.</em></td></tr>
+<tr><td>外貌/性格（稳定）</td><td><em>Es alta y simpática.</em></td></tr>
+<tr><td>时间/日期</td><td><em>Son las tres. / Es lunes.</em></td></tr>
+<tr><td>材质/颜色</td><td><em>La mesa es de madera. / Es azul.</em></td></tr>
+<tr><td>所有关系</td><td><em>Él es mi amigo. / Es de mi hermana.</em></td></tr>
+<tr><td>事件地点</td><td><em>La fiesta <strong>es</strong> en mi casa.</em>（不用estar）</td></tr>
+</table>
+<h3>ESTAR — 状态、位置、情绪</h3>
+<table><tr><th>用法</th><th>例句</th></tr>
+<tr><td>位置（人/物）</td><td><em>Madrid está en España. / Estoy en casa.</em></td></tr>
+<tr><td>临时状态</td><td><em>Estoy cansado hoy.</em></td></tr>
+<tr><td>情绪/感受</td><td><em>Estoy contento / triste / nervioso.</em></td></tr>
+<tr><td>进行时辅助</td><td><em>Estoy comiendo. / Está lloviendo.</em></td></tr>
+<tr><td>结果状态</td><td><em>La puerta está cerrada.</em></td></tr>
+</table>
+<h3>TENER — 拥有/年龄/表达</h3>
+<pre>Tengo un coche. / Tiene dos hermanos.
+Tiene veinte años.    （年龄用tener，不用ser）
+Tengo hambre/sed/sueño/frío/calor/miedo.
+Tener dolor de + 部位 → Tengo dolor de cabeza.</pre>
+<h3>LLEVAR — 穿戴/携带</h3>
+<pre>Lleva un abrigo rojo.     （穿着一件红色大衣）
+Lleva gafas.              （戴眼镜）
+Lleva el pelo largo.      （留长发）
+Lleva una bolsa negra.    （拿着一个黑包）</pre>
+<div class="callout cn"><div class="callout-title">ser、tener、llevar 描述外貌</div><pre>Es alto/baja/delgado/gordo/joven/mayor.   → SER（高矮胖瘦）
+Tiene los ojos azules / el pelo negro.   → TENER（五官特征）
+Lleva gafas / barba / uniforme.          → LLEVAR（穿戴）</pre></div>
+<h3>含义改变的形容词</h3>
+<table><tr><th>形容词</th><th>SER</th><th>ESTAR</th></tr>
+<tr><td>bueno</td><td>人品好</td><td>食物好吃/身体好</td></tr>
+<tr><td>malo</td><td>本质坏</td><td>生病了</td></tr>
+<tr><td>listo</td><td>聪明</td><td>准备好了</td></tr>
+<tr><td>aburrido</td><td>无聊的人</td><td>感到无聊</td></tr>
+<tr><td>rico</td><td>有钱</td><td>味道好</td></tr>
+<tr><td>vivo</td><td>机灵</td><td>还活着</td></tr>
+</table>
+<p class="xref">→ B1深化见 B1-4（性格与情绪形容词完整列表）</p>`},
+
+{id:'a1-5',title:'hay / está(n) — 存在与位置',sub:'contraste hay · estar',tags:['verbos'],html:`
+<div class="callout ci"><div class="callout-title">⭐ 核心区别</div>
+<strong>hay</strong> = 表示"有/存在"（泛指，不变位）<br>
+<strong>está/están</strong> = 表示"在某处"（特指位置）</div>
+<table><tr><th>hay</th><th>está/están</th></tr>
+<tr><td>存在（泛指，首次提及）</td><td>位置（特指，已知事物）</td></tr>
+<tr><td><em>Hay un banco cerca.</em></td><td><em>El banco <strong>está</strong> a la derecha.</em></td></tr>
+<tr><td><em>¿Hay una farmacia aquí?</em></td><td><em>La farmacia <strong>está</strong> en la calle Mayor.</em></td></tr>
+<tr><td><em>Hay mucha gente.</em></td><td><em>Los turistas <strong>están</strong> en la plaza.</em></td></tr>
+<tr><td>后接不定名词 un/una</td><td>后接定名词 el/la/los/las</td></tr>
+</table>
+<h3>方位标记词（Marcadores espaciales）</h3>
+<div class="chips"><span class="chip">a la derecha</span><span class="chip">a la izquierda</span><span class="chip">todo recto</span><span class="chip">al final de</span><span class="chip">al lado de</span><span class="chip">enfrente de</span><span class="chip">detrás de</span><span class="chip">delante de</span><span class="chip">cerca de</span><span class="chip">lejos de</span><span class="chip">entre</span><span class="chip">encima de</span><span class="chip">debajo de</span><span class="chip">dentro de</span><span class="chip">fuera de</span></div>
+<pre>El supermercado está <strong>al final de</strong> la calle.
+El baño está <strong>al lado de</strong> la recepción.
+La tienda está <strong>enfrente de</strong> la farmacia.</pre>`},
+
+{id:'a1-6',title:'形容词：描述外貌与性格',sub:'adjetivos de descripción física y de carácter',tags:['adjetivos'],html:`
+<h3>外貌描述（descripción física）</h3>
+<div class="two-col">
+<div class="card"><h4>身材 · 年龄</h4>
+<div class="chips"><span class="chip">alto/a</span><span class="chip">bajo/a</span><span class="chip">delgado/a</span><span class="chip">gordo/a</span><span class="chip">joven</span><span class="chip">mayor</span><span class="chip">mediano/a</span></div>
+</div>
+<div class="card"><h4>头发（pelo）</h4>
+<div class="chips"><span class="chip">largo</span><span class="chip">corto</span><span class="chip">negro</span><span class="chip">rubio</span><span class="chip">moreno</span><span class="chip">castaño</span><span class="chip">rizado</span><span class="chip">liso</span></div>
+</div>
+<div class="card"><h4>眼睛（ojos）</h4>
+<div class="chips"><span class="chip">azules</span><span class="chip">verdes</span><span class="chip">negros</span><span class="chip">marrones</span><span class="chip">grandes</span><span class="chip">pequeños</span></div>
+</div>
+<div class="card"><h4>其他特征</h4>
+<div class="chips"><span class="chip">guapo/a</span><span class="chip">feo/a</span><span class="chip">con barba</span><span class="chip">con bigote</span><span class="chip">con gafas</span><span class="chip">calvo/a</span></div>
+</div>
+</div>
+<pre>Es alto, delgado y tiene el pelo negro y liso.
+Lleva gafas y tiene los ojos verdes.</pre>
+<h3>性格描述（carácter）</h3>
+<div class="two-col">
+<div class="card"><h4>正面特征</h4>
+<div class="chips"><span class="chip">simpático/a</span><span class="chip">amable</span><span class="chip">inteligente</span><span class="chip">trabajador/a</span><span class="chip">generoso/a</span><span class="chip">divertido/a</span><span class="chip">tranquilo/a</span><span class="chip">honesto/a</span></div>
+</div>
+<div class="card"><h4>负面特征</h4>
+<div class="chips"><span class="chip">antipático/a</span><span class="chip">tímido/a</span><span class="chip">perezoso/a</span><span class="chip">egoísta</span><span class="chip">impaciente</span><span class="chip">nervioso/a</span><span class="chip">aburrido/a</span></div>
+</div>
+</div>
+<div class="callout cn"><div class="callout-title">描述外貌句型</div><pre>Es + adjetivo físico:    Es alto y guapo.
+Tiene + artículo + sust: Tiene los ojos azules.
+Tiene el pelo + adjetivo: Tiene el pelo largo y rubio.
+Lleva + prenda/accesorio: Lleva un jersey rojo.</pre></div>`},
+
+{id:'a1-7',title:'形容词性物主代词',sub:'adjetivos posesivos',tags:['pronombres'],html:`
+<h3>形式（前置式，最常用）</h3>
+<table><tr><th>人称</th><th>阳单</th><th>阴单</th><th>阳复</th><th>阴复</th><th>含义</th></tr>
+<tr><td>yo</td><td><strong class="hi">mi</strong></td><td><strong class="hi">mi</strong></td><td><strong class="hi">mis</strong></td><td><strong class="hi">mis</strong></td><td>我的</td></tr>
+<tr><td>tú</td><td><strong class="hi">tu</strong></td><td><strong class="hi">tu</strong></td><td><strong class="hi">tus</strong></td><td><strong class="hi">tus</strong></td><td>你的</td></tr>
+<tr><td>él/ella/usted</td><td><strong class="hi">su</strong></td><td><strong class="hi">su</strong></td><td><strong class="hi">sus</strong></td><td><strong class="hi">sus</strong></td><td>他/她/您的</td></tr>
+<tr><td>nosotros</td><td><strong class="hi">nuestro</strong></td><td><strong class="hi">nuestra</strong></td><td><strong class="hi">nuestros</strong></td><td><strong class="hi">nuestras</strong></td><td>我们的</td></tr>
+<tr><td>vosotros</td><td><strong class="hi">vuestro</strong></td><td><strong class="hi">vuestra</strong></td><td><strong class="hi">vuestros</strong></td><td><strong class="hi">vuestras</strong></td><td>你们的</td></tr>
+<tr><td>ellos/ustedes</td><td><strong class="hi">su</strong></td><td><strong class="hi">su</strong></td><td><strong class="hi">sus</strong></td><td><strong class="hi">sus</strong></td><td>他们/您们的</td></tr>
+</table>
+<pre>mi libro, mi casa, mis libros, mis casas
+nuestro coche, nuestra familia, nuestros hijos</pre>
+<div class="callout ct"><div class="callout-title">💡 注意</div>物主代词与<strong>被拥有的名词</strong>一致，不与主语一致：<br><em>Ellos tienen <strong>su</strong> coche.</em>（他们有他们的车 — su与coche一致）<br><em>Nosotros tenemos <strong>nuestros</strong> libros.</em>（nuestros与libros一致）</div>`},
+
+{id:'a1-8',title:'代词与疑问词',sub:'pronombres personales · interrogativos',tags:['pronombres'],html:`
+<h3>主格人称代词</h3>
+<table><tr><th>人称</th><th>单数</th><th>复数</th></tr>
+<tr><td>1ª</td><td>yo</td><td>nosotros / nosotras</td></tr>
+<tr><td>2ª informal</td><td>tú</td><td>vosotros / vosotras</td></tr>
+<tr><td>2ª formal</td><td>usted (Ud.)</td><td>ustedes (Uds.)</td></tr>
+<tr><td>3ª</td><td>él / ella</td><td>ellos / ellas</td></tr>
+</table>
+<div class="callout cn"><div class="callout-title">主语常省略</div>动词变位已包含人称信息，日常口语中主语代词通常省略。<br><em>(Yo) Tengo hambre. / (Nosotros) Vivimos en Madrid.</em></div>
+<h3>疑问代词与疑问副词</h3>
+<table><tr><th>疑问词</th><th>含义</th><th>例句</th></tr>
+<tr><td><strong>¿Qué?</strong></td><td>什么（定义/询问）</td><td><em>¿Qué es esto? / ¿Qué haces?</em></td></tr>
+<tr><td><strong>¿Cuál? / ¿Cuáles?</strong></td><td>哪个/哪些（选择）</td><td><em>¿Cuál prefieres? / ¿Cuáles son tus libros?</em></td></tr>
+<tr><td><strong>¿Quién? / ¿Quiénes?</strong></td><td>谁</td><td><em>¿Quién es? / ¿Quiénes son?</em></td></tr>
+<tr><td><strong>¿Dónde?</strong></td><td>在哪里</td><td><em>¿Dónde está el baño?</em></td></tr>
+<tr><td><strong>¿Adónde?</strong></td><td>去哪里</td><td><em>¿Adónde vas?</em></td></tr>
+<tr><td><strong>¿Cuándo?</strong></td><td>什么时候</td><td><em>¿Cuándo llegas?</em></td></tr>
+<tr><td><strong>¿Cómo?</strong></td><td>怎么/如何</td><td><em>¿Cómo te llamas? / ¿Cómo estás?</em></td></tr>
+<tr><td><strong>¿Cuánto/a?</strong></td><td>多少（量）</td><td><em>¿Cuánto cuesta? / ¿Cuánta gente hay?</em></td></tr>
+<tr><td><strong>¿Cuántos/as?</strong></td><td>多少（数）</td><td><em>¿Cuántos años tienes? / ¿Cuántas personas?</em></td></tr>
+<tr><td><strong>¿Por qué?</strong></td><td>为什么</td><td><em>¿Por qué estudias español?</em></td></tr>
+<tr><td><strong>¿Para qué?</strong></td><td>为了什么目的</td><td><em>¿Para qué sirve esto?</em></td></tr>
+</table>
+<div class="callout cn"><div class="callout-title">¿Qué? vs. ¿Cuál?</div><strong>¿Qué es...?</strong> → 定义/解释：<em>¿Qué es el amor?</em><br><strong>¿Cuál es...?</strong> → 从选项中选择：<em>¿Cuál es tu nombre? / ¿Cuál es la capital?</em></div>`},
+
+{id:'a1-9',title:'动词 ir（去）与移动介词',sub:'verbo ir · preposiciones a · en con movimiento',tags:['verbos','preposiciones'],html:`
+<h3>ir 变位（完全不规则）</h3>
+<table><tr><th>yo</th><th>tú</th><th>él/ella</th><th>nosotros</th><th>vosotros</th><th>ellos</th></tr>
+<tr><td><strong class="hi">voy</strong></td><td>vas</td><td>va</td><td>vamos</td><td>vais</td><td>van</td></tr>
+</table>
+<h3>移动动词 + 介词 a / en</h3>
+<table><tr><th>介词</th><th>用法</th><th>例句</th></tr>
+<tr><td><strong>a</strong></td><td>目的地（去哪里）</td><td><em>Voy <strong>a</strong> Madrid. / Vamos <strong>a</strong> casa.</em></td></tr>
+<tr><td><strong>en</strong></td><td>交通工具</td><td><em>Voy <strong>en</strong> metro. / Viajamos <strong>en</strong> avión.</em></td></tr>
+<tr><td><strong>a pie</strong></td><td>步行</td><td><em>Voy al trabajo <strong>a pie</strong>.</em></td></tr>
+</table>
+<div class="chips"><span class="chip">ir en metro</span><span class="chip">ir en autobús</span><span class="chip">ir en coche</span><span class="chip">ir en bici</span><span class="chip">ir en tren</span><span class="chip">ir en avión</span><span class="chip">ir a pie</span></div>
+<h3>ir a + infinitivo（即将来时）</h3>
+<pre>Voy <strong>a estudiar</strong> esta tarde.     （我今晚要学习）
+¿Vas <strong>a venir</strong> a la fiesta?     （你来派对吗？）
+Vamos <strong>a comer</strong> juntos.         （我们一起去吃饭）</pre>
+<div class="callout ct"><div class="callout-title">💡 记忆</div>ir a + inf. 相当于英语 going to，表示近期计划或意图。</div>`},
+
+{id:'a1-10',title:'反身动词',sub:'verbos reflexivos · pronombres reflexivos',tags:['verbos'],html:`
+<h3>反身代词</h3>
+<table><tr><th>人称</th><th>代词</th><th>例（llamarse）</th></tr>
+<tr><td>yo</td><td><strong class="hi">me</strong></td><td>me llamo</td></tr>
+<tr><td>tú</td><td><strong class="hi">te</strong></td><td>te llamas</td></tr>
+<tr><td>él/ella/usted</td><td><strong class="hi">se</strong></td><td>se llama</td></tr>
+<tr><td>nosotros</td><td><strong class="hi">nos</strong></td><td>nos llamamos</td></tr>
+<tr><td>vosotros</td><td><strong class="hi">os</strong></td><td>os llamáis</td></tr>
+<tr><td>ellos/ustedes</td><td><strong class="hi">se</strong></td><td>se llaman</td></tr>
+</table>
+<h3>常见反身动词（日常作息）</h3>
+<table><tr><th>动词</th><th>含义</th><th>例句</th></tr>
+<tr><td>llamarse</td><td>叫（名字）</td><td><em>Me llamo Ana.</em></td></tr>
+<tr><td>levantarse</td><td>起床</td><td><em>Me levanto a las 7.</em></td></tr>
+<tr><td>acostarse (o>ue)</td><td>上床睡觉</td><td><em>Me acuesto a las 11.</em></td></tr>
+<tr><td>ducharse</td><td>淋浴</td><td><em>Me ducho por la mañana.</em></td></tr>
+<tr><td>despertarse (e>ie)</td><td>醒来</td><td><em>Me despierto a las 6.</em></td></tr>
+<tr><td>vestirse (e>i)</td><td>穿衣</td><td><em>Me visto en 5 minutos.</em></td></tr>
+<tr><td>peinarse</td><td>梳头</td><td><em>Me peino el pelo.</em></td></tr>
+<tr><td>sentarse (e>ie)</td><td>坐下</td><td><em>Siéntate aquí.</em></td></tr>
+<tr><td>quedarse</td><td>留下/待在</td><td><em>Me quedo en casa.</em></td></tr>
+</table>
+<div class="callout cn"><div class="callout-title">注意位置</div>代词放在变位动词<strong>前</strong>，或附加在不定式/动名词<strong>后</strong>：<br><em>Me levanto.</em> / <em>Voy a levantarme.</em> / <em>Estoy levantándome.</em></div>`},
+
+{id:'a1-11',title:'数量表达：mucho / poco / muy',sub:'adverbios y expresiones de cantidad',tags:['adjetivos','adverbios'],html:`
+<h3>mucho / poco — 作形容词（修饰名词，有性数变化）</h3>
+<table><tr><th></th><th>阳单</th><th>阴单</th><th>阳复</th><th>阴复</th></tr>
+<tr><td>mucho（很多）</td><td>much<strong>o</strong></td><td>much<strong>a</strong></td><td>much<strong>os</strong></td><td>much<strong>as</strong></td></tr>
+<tr><td>poco（少许）</td><td>poc<strong>o</strong></td><td>poc<strong>a</strong></td><td>poc<strong>os</strong></td><td>poc<strong>as</strong></td></tr>
+</table>
+<pre>Hay <strong>mucho</strong> tráfico.          Hay <strong>mucha</strong> gente.
+Hay <strong>muchos</strong> turistas.        Hay <strong>muchas</strong> flores.
+Tengo <strong>poco</strong> tiempo.          Hay <strong>poca</strong> agua.
+Hay <strong>pocos</strong> coches.           Hay <strong>pocas</strong> personas.</pre>
+<h3>muy — 作副词（修饰形容词/副词，不变化）</h3>
+<pre>Es <strong>muy</strong> inteligente.   （很聪明）
+Está <strong>muy</strong> cansado.      （很累）
+Habla <strong>muy</strong> bien.        （说得很好）
+Vivo <strong>muy</strong> lejos.        （住得很远）</pre>
+<div class="callout cw"><div class="callout-title">⚠ 常见错误</div>
+<strong class="err">✗ Es mucho interesante.</strong>（错误）<br>
+<strong class="ok">✓ Es muy interesante.</strong>（形容词前用 muy）<br>
+<strong class="err">✗ Hay muy gente.</strong>（错误）<br>
+<strong class="ok">✓ Hay mucha gente.</strong>（名词前用 mucho/a）</div>
+<h3>其他数量副词与形容词</h3>
+<table><tr><th>词</th><th>含义</th><th>例句</th></tr>
+<tr><td><strong>nada</strong></td><td>什么都没有/一点不</td><td><em>No tengo nada. / No me gusta nada.</em></td></tr>
+<tr><td><strong>bastante</strong></td><td>相当多/足够</td><td><em>Tengo bastante dinero. / Es bastante difícil.</em></td></tr>
+<tr><td><strong>demasiado/a</strong></td><td>太多/过分</td><td><em>Hay demasiado ruido. / Es demasiado caro.</em></td></tr>
+<tr><td><strong>suficiente</strong></td><td>足够的</td><td><em>Tengo suficiente tiempo.</em></td></tr>
+</table>`},
+
+{id:'a1-12',title:'频率副词与时间表达',sub:'adverbios de frecuencia · expresiones temporales',tags:['adverbios'],html:`
+<h3>频率副词（Adverbios de frecuencia）</h3>
+<table><tr><th>词</th><th>含义</th><th>频率</th></tr>
+<tr><td><strong>siempre</strong></td><td>总是</td><td>100%</td></tr>
+<tr><td><strong>casi siempre</strong></td><td>几乎总是</td><td>~90%</td></tr>
+<tr><td><strong>normalmente / generalmente</strong></td><td>通常/一般</td><td>~75%</td></tr>
+<tr><td><strong>a menudo / frecuentemente</strong></td><td>经常</td><td>~60%</td></tr>
+<tr><td><strong>a veces</strong></td><td>有时候</td><td>~40%</td></tr>
+<tr><td><strong>pocas veces</strong></td><td>很少</td><td>~20%</td></tr>
+<tr><td><strong>casi nunca / rara vez</strong></td><td>几乎从不</td><td>~5%</td></tr>
+<tr><td><strong>nunca / jamás</strong></td><td>从不</td><td>0%</td></tr>
+</table>
+<h3>位置规律</h3>
+<pre>频率副词通常放在动词<strong>前</strong>或句<strong>末</strong>：
+  <strong>Siempre</strong> como en casa.   /   Como en casa <strong>siempre</strong>.
+  <strong>Nunca</strong> bebo alcohol.    /   No bebo alcohol <strong>nunca</strong>.
+  A veces voy al gimnasio.
+  Normalmente me levanto a las 7.</pre>
+<div class="callout cn"><div class="callout-title">否定频率词</div>
+<em>nunca / jamás / rara vez</em> 放句首时，动词<strong>不加 no</strong>：<br>
+<em><strong>Nunca</strong> como carne.</em>（句首，无no）<br>
+<em>No como carne <strong>nunca</strong>.</em>（句末，有no——双重否定强调）</div>
+<h3>时间频率表达</h3>
+<div class="chips"><span class="chip">todos los días</span><span class="chip">todas las semanas</span><span class="chip">cada semana</span><span class="chip">los lunes</span><span class="chip">los fines de semana</span><span class="chip">una vez a la semana</span><span class="chip">dos veces al mes</span></div>`},
+
+{id:'a1-13',title:'gustar / doler 类动词',sub:'verbos gustar · doler · OI',tags:['verbos','valoracion'],html:`
+<h3>gustar / encantar — 间接宾语结构</h3>
+<div class="callout cn"><div class="callout-title">结构特殊</div>主语是"被喜欢的事物"，人是间接宾语（OI）<br>用 <strong>gusta</strong>（单数/不定式）或 <strong>gustan</strong>（复数）</div>
+<pre>A mí  me  <strong>gusta</strong>   el café.         （主语 = el café，单数）
+A ti  te  <strong>gustan</strong>  los gatos.       （主语 = los gatos，复数）
+A él  le  <strong>encanta</strong>  bailar.         （主语 = bailar，不定式）
+A nosotros nos <strong>gusta</strong> la música.
+A ellos  les <strong>gustan</strong> las películas.</pre>
+<table><tr><th>动词</th><th>含义</th><th>例句</th></tr>
+<tr><td><strong>gustar</strong></td><td>喜欢</td><td><em>Me gusta el jazz. / Me gustan los libros.</em></td></tr>
+<tr><td><strong>encantar</strong></td><td>非常喜欢</td><td><em>Me encanta viajar. / Me encantan los gatos.</em></td></tr>
+<tr><td><strong>interesar</strong></td><td>感兴趣</td><td><em>Me interesa la historia.</em></td></tr>
+<tr><td><strong>molestar</strong></td><td>感到烦扰</td><td><em>Me molesta el ruido.</em></td></tr>
+<tr><td><strong>preocupar</strong></td><td>担心</td><td><em>Me preocupa el examen.</em></td></tr>
+<tr><td><strong>faltar</strong></td><td>缺少</td><td><em>Me falta dinero.</em></td></tr>
+<tr><td><strong>quedar</strong></td><td>剩余/约定</td><td><em>Me quedan dos días.</em></td></tr>
+<tr><td><strong>parecer</strong></td><td>觉得/认为</td><td><em>Me parece interesante.</em></td></tr>
+</table>
+<h3>doler — 疼痛（同 gustar 结构）</h3>
+<pre>Me <strong>duele</strong> la cabeza.         （头痛 — 单数）
+Me <strong>duelen</strong> los pies.          （脚痛 — 复数）
+Tengo <strong>dolor de</strong> cabeza/estómago/espalda.
+
+Le duele el estómago.          （他/她胃痛）
+¿Te duele algo?                （你哪里疼吗？）</pre>
+<h3>间接宾语代词（OI）</h3>
+<table><tr><th>人称</th><th>OI 代词</th><th>强调形式</th></tr>
+<tr><td>yo</td><td><strong>me</strong></td><td>a mí</td></tr>
+<tr><td>tú</td><td><strong>te</strong></td><td>a ti</td></tr>
+<tr><td>él/ella/usted</td><td><strong>le</strong></td><td>a él/ella/usted</td></tr>
+<tr><td>nosotros</td><td><strong>nos</strong></td><td>a nosotros</td></tr>
+<tr><td>vosotros</td><td><strong>os</strong></td><td>a vosotros</td></tr>
+<tr><td>ellos/ustedes</td><td><strong>les</strong></td><td>a ellos/ustedes</td></tr>
+</table>`},
+
+{id:'a1-14',title:'también / tampoco · también no',sub:'también · tampoco · acuerdo y desacuerdo',tags:['adverbios'],html:`
+<h3>también / tampoco — 表达一致</h3>
+<table><tr><th></th><th>肯定句</th><th>否定句</th></tr>
+<tr><td>表示同样情况</td><td><strong>también</strong></td><td><strong>tampoco</strong></td></tr>
+<tr><td>表示不同情况</td><td>yo no</td><td>yo sí</td></tr>
+</table>
+<pre>— Me gusta el café. — A mí <strong>también</strong>.
+— No me gusta el té. — A mí <strong>tampoco</strong>.
+— Me gusta el café. — Pues a mí <strong>no</strong>.  （反向）
+— No me gusta el té. — Pues a mí <strong>sí</strong>. （反向）</pre>
+<h3>扩展：表达观点与同意</h3>
+<pre>Creo que + opinión:         Creo que es una buena idea.
+Pienso que + opinión:       Pienso que tiene razón.
+Para mí + opinión:          Para mí, es muy importante.
+(Me) parece que + opinión:  Me parece que es correcto.
+
+Estoy de acuerdo con...     Estoy de acuerdo contigo.
+No estoy de acuerdo con...  No estoy de acuerdo con eso.
+Tienes razón.               No tienes razón.</pre>
+<h3>La negación — 否定句</h3>
+<pre>no + verbo:               No como carne.
+No... nada:               No tengo nada.
+No... nadie:              No hay nadie aquí.
+No... nunca/jamás:        No voy nunca al gimnasio.
+No... ni... ni...:        No tengo ni tiempo ni dinero.
+No... tampoco:            No me gusta el té tampoco.</pre>`},
+
+{id:'a1-15',title:'necesitar / querer / preferir + inf.',sub:'verbos de volición con infinitivo o nombre',tags:['verbos'],html:`
+<h3>结构</h3>
+<pre>necesitar + infinitivo/nombre → 需要
+querer (e>ie) + infinitivo/nombre → 想要
+preferir (e>ie) + infinitivo/nombre → 更喜欢/更愿意</pre>
+<table><tr><th>动词</th><th>+ infinitivo</th><th>+ nombre</th></tr>
+<tr><td><strong>necesitar</strong></td><td><em>Necesito <strong>descansar</strong>.</em></td><td><em>Necesito <strong>un médico</strong>.</em></td></tr>
+<tr><td><strong>querer</strong></td><td><em>Quiero <strong>ir</strong> al cine.</em></td><td><em>Quiero <strong>un café</strong>.</em></td></tr>
+<tr><td><strong>preferir</strong></td><td><em>Prefiero <strong>quedarme</strong> en casa.</em></td><td><em>Prefiero <strong>el té</strong>.</em></td></tr>
+</table>
+<h3>poder + infinitivo（能力/可能/建议）</h3>
+<pre>poder（o>ue）:  puedo / puedes / puede / podemos / podéis / pueden
+
+能力：   No puedo venir mañana.         （明天没法来）
+许可：   ¿Puedo abrir la ventana?       （我可以开窗吗？）
+建议：   Puedes ir en metro.            （你可以坐地铁去）
+提议：   Podemos quedar el viernes.     （我们可以周五见面）</pre>
+<h3>基础句型：评价与有用性</h3>
+<pre>Es útil/bueno/necesario/importante + infinitivo:
+  Es útil saber idiomas.
+  Es necesario descansar.
+  Es importante estudiar.
+
+Para + infinitivo（目的）:
+  Estudio español para <strong>viajar</strong>.
+  Como verdura para <strong>estar</strong> sano.</pre>`},
+
+{id:'a1-16',title:'现在进行时（estar + gerundio）',sub:'gerundio · estar + gerundio',tags:['verbos'],html:`
+<h3>动名词（Gerundio）的构成</h3>
+<table><tr><th>动词类型</th><th>规则</th><th>例</th></tr>
+<tr><td>-AR 动词</td><td>词根 + <strong>-ando</strong></td><td>hablar → <strong>hablando</strong></td></tr>
+<tr><td>-ER/-IR 动词</td><td>词根 + <strong>-iendo</strong></td><td>comer → <strong>comiendo</strong> / vivir → <strong>viviendo</strong></td></tr>
+<tr><td>词根以元音结尾</td><td>+ <strong>-yendo</strong></td><td>leer → <strong>leyendo</strong> / oir → <strong>oyendo</strong></td></tr>
+</table>
+<h3>不规则动名词</h3>
+<div class="chips"><span class="chip">decir → diciendo</span><span class="chip">pedir → pidiendo</span><span class="chip">dormir → durmiendo</span><span class="chip">venir → viniendo</span><span class="chip">ir → yendo</span><span class="chip">poder → pudiendo</span></div>
+<h3>estar + gerundio — 现在进行时</h3>
+<pre>Estoy <strong>hablando</strong> por teléfono.      （我正在打电话）
+Está <strong>comiendo</strong> en el restaurante.   （他正在餐厅吃饭）
+Estamos <strong>estudiando</strong> español.        （我们正在学西班牙语）
+¿Qué estás <strong>haciendo</strong>?              （你在做什么？）</pre>
+<div class="callout cn"><div class="callout-title">用法</div>
+表示<strong>此刻正在进行</strong>的动作，强调动作的持续性：<br>
+<em>Ahora mismo estoy trabajando.</em>（此刻我正在工作）<br>
+也可用于描述某一阶段正在进行的情况：<br>
+<em>Últimamente estoy leyendo mucho.</em>（最近我一直在大量阅读）</div>
+<h3>动名词的其他用法</h3>
+<pre>seguir + gerundio:   Sigue lloviendo.      （还在下雨）
+llevar + tiempo + gerundio: Llevo dos horas esperando.
+方式副词：  Hablar cantando es difícil.    （作方式状语）</pre>`},
+
+{id:'a1-17',title:'介词 a / en / de',sub:'preposiciones principales',tags:['preposiciones'],html:`
+<table><tr><th>介词</th><th>核心用法</th><th>例句</th></tr>
+<tr><td rowspan="4"><strong>a</strong></td><td>方向/目标</td><td><em>Voy <strong>a</strong> Madrid.</em></td></tr>
+<tr><td>时间（时刻）</td><td><em>Llego <strong>a</strong> las tres. / <strong>A</strong> las ocho.</em></td></tr>
+<tr><td>人称直接宾语标记</td><td><em>Llamo <strong>a</strong> María. / Veo <strong>a</strong> mis amigos.</em></td></tr>
+<tr><td>距离</td><td><em>Está <strong>a</strong> 5km. / <strong>A</strong> dos horas de aquí.</em></td></tr>
+<tr><td rowspan="3"><strong>en</strong></td><td>位置（在…里/上）</td><td><em>Estoy <strong>en</strong> casa. / Vivo <strong>en</strong> Madrid.</em></td></tr>
+<tr><td>交通工具</td><td><em>Voy <strong>en</strong> metro. / Viajo <strong>en</strong> tren.</em></td></tr>
+<tr><td>时间（月/年/季节）</td><td><em>Nació <strong>en</strong> mayo. / <strong>En</strong> verano.</em></td></tr>
+<tr><td rowspan="4"><strong>de</strong></td><td>来源/归属</td><td><em>Soy <strong>de</strong> China. / Es el libro <strong>de</strong> Juan.</em></td></tr>
+<tr><td>材质</td><td><em>Es <strong>de</strong> madera. / Una camiseta <strong>de</strong> algodón.</em></td></tr>
+<tr><td>时间段（de…a…）</td><td><em>Trabajo <strong>de</strong> 9 <strong>a</strong> 5.</em></td></tr>
+<tr><td>话题/关于</td><td><em>Hablamos <strong>de</strong> política.</em></td></tr>
+</table>
+<div class="callout ct"><div class="callout-title">💡 常见搭配</div>
+<div class="chips"><span class="chip">ir a</span><span class="chip">venir de</span><span class="chip">estar en</span><span class="chip">salir de</span><span class="chip">llegar a</span><span class="chip">hablar de</span><span class="chip">pensar en</span><span class="chip">trabajar en</span><span class="chip">vivir en</span></div></div>`},
+
+{id:'a1-18',title:'基础句型与语用',sub:'¿por qué? · obligación · negación · permiso',tags:['estructura'],html:`
+<h3>¿Por qué? / ¿Para qué? — 原因与目的</h3>
+<table><tr><th>问句</th><th>侧重</th><th>回答结构</th></tr>
+<tr><td>¿Por qué?</td><td>原因（因为）</td><td><strong>Porque</strong> + verbo conjugado</td></tr>
+<tr><td>¿Para qué?</td><td>目的（为了）</td><td><strong>Para</strong> + infinitivo</td></tr>
+</table>
+<pre>¿Por qué estudias español? → Porque quiero viajar.
+¿Para qué lo necesitas?    → Para comunicarme mejor.</pre>
+<h3>义务 / 能力 / 许可 / 禁止</h3>
+<pre>Tener que + inf.      → Tengo que estudiar.         （必须）
+Deber + inf.          → Debes respetar las normas.  （应该）
+Poder + inf.          → Puedo hablar español.       （能够）
+Se puede + inf.       → Se puede aparcar aquí.      （可以——非人称）
+Se debe + inf.        → Se debe respetar.           （应该——非人称）
+Está permitido + inf. → Está permitido fumar aquí.  （允许）
+Está prohibido + inf. → Está prohibido fumar aquí.  （禁止）</pre>
+<h3>描述物品（ser / estar hecho de / servir para）</h3>
+<pre>Es de madera.                          → 材质（ser de）
+Está hecho/a de plástico.              → 制造材质
+Procede del Mediterráneo.              → 来源
+Sirve para cortar / escribir.          → 功能（sirve para）</pre>
+<h3>quedar — 约定/剩余/适合</h3>
+<pre>Quedamos a las 8.          （我们约好8点见）
+Quedamos en el café.       （约在咖啡馆见）
+Me quedan 10 euros.        （我还剩10欧元）
+Te queda bien ese vestido. （那条裙子很适合你）</pre>`},
+
+{id:'a1-19',title:'命令式（肯定）',sub:'imperativo afirmativo · regulares e irregulares',tags:['verbos','imperativo'],html:`
+<h3>规则变位（肯定命令）</h3>
+<table><tr><th>人称</th><th>-AR hablar</th><th>-ER comer</th><th>-IR vivir</th></tr>
+<tr><td><strong>tú</strong></td><td class="ok"><strong>habla</strong></td><td class="ok"><strong>come</strong></td><td class="ok"><strong>vive</strong></td></tr>
+<tr><td>usted</td><td>hable</td><td>coma</td><td>viva</td></tr>
+<tr><td>nosotros</td><td>hablemos</td><td>comamos</td><td>vivamos</td></tr>
+<tr><td>vosotros</td><td>hablad</td><td>comed</td><td>vivid</td></tr>
+<tr><td>ustedes</td><td>hablen</td><td>coman</td><td>vivan</td></tr>
+</table>
+<div class="callout cn"><div class="callout-title">构成规律</div><strong>tú 肯定命令</strong> = 现在时 él/ella 形式（通常）<br><strong>usted/ustedes/nosotros</strong> = 虚拟式现在时</div>
+<h3>不规则（tú 肯定命令，8个必背）</h3>
+<table><tr><th>动词</th><th>tú命令</th><th>含义</th></tr>
+<tr><td>ser</td><td><strong class="hi">sé</strong></td><td>做（成为）</td></tr>
+<tr><td>ir</td><td><strong class="hi">ve</strong></td><td>去</td></tr>
+<tr><td>tener</td><td><strong class="hi">ten</strong></td><td>有/拿着</td></tr>
+<tr><td>venir</td><td><strong class="hi">ven</strong></td><td>来</td></tr>
+<tr><td>hacer</td><td><strong class="hi">haz</strong></td><td>做</td></tr>
+<tr><td>poner</td><td><strong class="hi">pon</strong></td><td>放</td></tr>
+<tr><td>decir</td><td><strong class="hi">di</strong></td><td>说</td></tr>
+<tr><td>salir</td><td><strong class="hi">sal</strong></td><td>出去</td></tr>
+</table>
+<h3>代词与命令式</h3>
+<pre>肯定命令 → 代词<strong>后置</strong>（附加）：
+  Dí<strong>me</strong>.         （告诉我）
+  Dá<strong>sela</strong>.       （把它给她）   = da + se + la
+  Siéntate.      （坐下）     = sienta + te
+
+否定命令（参见 A2-12）→ 代词<strong>前置</strong>：
+  No me digas.   / No lo hagas.</pre>`}
+],
+a2:[
+{id:'a2-1',title:'简单过去时（Indefinido）',sub:'pretérito indefinido · morfología y uso',tags:['verbos','pasado'],html:`
+<h3>规则变位</h3>
+<table><tr><th>人称</th><th>-AR hablar</th><th>-ER/-IR comer</th></tr>
+<tr><td>yo</td><td><strong class="hi">hablé</strong></td><td><strong class="hi">comí</strong></td></tr>
+<tr><td>tú</td><td>hablaste</td><td>comiste</td></tr>
+<tr><td>él/ella</td><td>habló</td><td>comió</td></tr>
+<tr><td>nosotros</td><td>hablamos</td><td>comimos</td></tr>
+<tr><td>vosotros</td><td>hablasteis</td><td>comisteis</td></tr>
+<tr><td>ellos</td><td>hablaron</td><td>comieron</td></tr>
+</table>
+<h3>完全不规则</h3>
+<table><tr><th>动词</th><th>yo</th><th>él</th><th>ellos</th></tr>
+<tr><td>ser / ir</td><td>fui</td><td>fue</td><td>fueron</td></tr>
+<tr><td>estar</td><td>estuve</td><td>estuvo</td><td>estuvieron</td></tr>
+<tr><td>tener</td><td>tuve</td><td>tuvo</td><td>tuvieron</td></tr>
+<tr><td>hacer</td><td>hice</td><td>hizo</td><td>hicieron</td></tr>
+<tr><td>dar</td><td>di</td><td>dio</td><td>dieron</td></tr>
+<tr><td>poder</td><td>pude</td><td>pudo</td><td>pudieron</td></tr>
+<tr><td>venir</td><td>vine</td><td>vino</td><td>vinieron</td></tr>
+<tr><td>decir</td><td>dije</td><td>dijo</td><td>dijeron</td></tr>
+<tr><td>saber</td><td>supe</td><td>supo</td><td>supieron</td></tr>
+<tr><td>poner</td><td>puse</td><td>puso</td><td>pusieron</td></tr>
+<tr><td>querer</td><td>quise</td><td>quiso</td><td>quisieron</td></tr>
+</table>
+<h3>3ª persona 变音（e→i / o→u）</h3>
+<table><tr><th>动词</th><th>él/ella</th><th>ellos</th></tr>
+<tr><td>pedir</td><td>pidió</td><td>pidieron</td></tr>
+<tr><td>dormir</td><td>durmió</td><td>durmieron</td></tr>
+<tr><td>sentir</td><td>sintió</td><td>sintieron</td></tr>
+<tr><td>preferir</td><td>prefirió</td><td>prefirieron</td></tr>
+</table>
+<h3>用法 & Marcadores temporales</h3>
+<table><tr><th>用法</th><th>例句</th><th>标记词</th></tr>
+<tr><td>完成的单次动作</td><td><em>Ayer fui al cine.</em></td><td><code>ayer</code> <code>anoche</code></td></tr>
+<tr><td>明确时间点</td><td><em>El lunes llamé a mi madre.</em></td><td><code>el lunes</code> <code>en 2020</code></td></tr>
+<tr><td>历史事件</td><td><em>Colón llegó en 1492.</em></td><td><code>en + año</code></td></tr>
+<tr><td>连续动作</td><td><em>Entré, me senté y leí.</em></td><td><code>primero… luego…</code></td></tr>
+</table>
+<div class="chips"><span class="chip">ayer</span><span class="chip">anoche</span><span class="chip">anteayer</span><span class="chip">el otro día</span><span class="chip">la semana pasada</span><span class="chip">el mes pasado</span><span class="chip">el año pasado</span><span class="chip">hace un año</span><span class="chip">al cabo de…</span><span class="chip">desde… hasta…</span></div>`},
+{id:'a2-2',title:'未完成过去时（Imperfecto）',sub:'pretérito imperfecto · morfología y uso',tags:['verbos','pasado'],html:`
+<h3>规则变位</h3>
+<table><tr><th>人称</th><th>-AR hablar</th><th>-ER/-IR comer</th></tr>
+<tr><td>yo</td><td><strong class="hi">hablaba</strong></td><td><strong class="hi">comía</strong></td></tr>
+<tr><td>tú</td><td>hablabas</td><td>comías</td></tr>
+<tr><td>él/ella</td><td>hablaba</td><td>comía</td></tr>
+<tr><td>nosotros</td><td>hablábamos</td><td>comíamos</td></tr>
+<tr><td>vosotros</td><td>hablabais</td><td>comíais</td></tr>
+<tr><td>ellos</td><td>hablaban</td><td>comían</td></tr>
+</table>
+<div class="callout cn"><div class="callout-title">只有 3 个完全不规则</div><strong>ser</strong> → era, eras, era, éramos, erais, eran<br><strong>ir</strong> → iba, ibas, iba, íbamos, ibais, iban<br><strong>ver</strong> → veía, veías, veía, veíamos, veíais, veían</div>
+<h3>用法 & Marcadores</h3>
+<table><tr><th>用法</th><th>例句</th></tr>
+<tr><td>过去习惯/重复</td><td><em>De niño jugaba todos los días.</em></td></tr>
+<tr><td>描述过去场景/状态</td><td><em>La casa era muy grande.</em></td></tr>
+<tr><td>过去的感受/想法</td><td><em>Quería ser médico.</em></td></tr>
+<tr><td>进行中的背景动作</td><td><em>Llovía cuando salí.</em></td></tr>
+<tr><td>礼貌请求（口语）</td><td><em>Quería un café, por favor.</em></td></tr>
+</table>
+<div class="chips"><span class="chip">antes</span><span class="chip">de niño/a</span><span class="chip">siempre</span><span class="chip">todos los días</span><span class="chip">normalmente</span><span class="chip">cuando era pequeño</span><span class="chip">mientras</span></div>
+<h3>estar (imperfecto) + gerundio</h3>
+<pre>Estaba leyendo cuando llegaste.    （过去进行时）
+¿Qué estabas haciendo a las 8?</pre>
+<h3>soler + infinitivo（过去习惯）</h3>
+<pre>Solía levantarme temprano.   （过去常常早起）
+Solía ir al parque los domingos.</pre>`},
+{id:'a2-3',title:'Indefinido vs. Perfecto ⭐',sub:'contraste · marcadores temporales',tags:['verbos','pasado'],html:`
+<h3>Pretérito Perfecto — 构成</h3>
+<p><strong>haber（presente）+ participio</strong></p>
+<table><tr><th>人称</th><th>haber</th><th>例</th></tr>
+<tr><td>yo</td><td><strong class="hi">he</strong></td><td>he hablado</td></tr>
+<tr><td>tú</td><td>has</td><td>has comido</td></tr>
+<tr><td>él/ella</td><td>ha</td><td>ha vivido</td></tr>
+<tr><td>nosotros</td><td>hemos</td><td>hemos ido</td></tr>
+<tr><td>vosotros</td><td>habéis</td><td>habéis hecho</td></tr>
+<tr><td>ellos</td><td>han</td><td>han dicho</td></tr>
+</table>
+<h3>不规则过去分词（必背）</h3>
+<table><tr><th>分词</th><th>原形</th><th>分词</th><th>原形</th></tr>
+<tr><td><strong>hecho</strong></td><td>hacer</td><td><strong>visto</strong></td><td>ver</td></tr>
+<tr><td><strong>dicho</strong></td><td>decir</td><td><strong>puesto</strong></td><td>poner</td></tr>
+<tr><td><strong>escrito</strong></td><td>escribir</td><td><strong>abierto</strong></td><td>abrir</td></tr>
+<tr><td><strong>vuelto</strong></td><td>volver</td><td><strong>muerto</strong></td><td>morir</td></tr>
+<tr><td><strong>roto</strong></td><td>romper</td><td><strong>cubierto</strong></td><td>cubrir</td></tr>
+</table>
+<h3>两种过去时对比</h3>
+<table><tr><th>Pretérito Perfecto</th><th>Pretérito Indefinido</th></tr>
+<tr><td>近期/有关联的过去</td><td>完成的、与现在无关的过去</td></tr>
+<tr><td>今天/本周期内</td><td>昨天/上周/历史事件</td></tr>
+<tr><td>经历（alguna vez）</td><td>单次完成动作</td></tr>
+</table>
+<table><tr><th>Perfecto</th><th>Indefinido</th></tr>
+<tr><td><code>hoy</code> <code>esta mañana</code> <code>hace unos minutos</code></td><td><code>ayer</code> <code>anoche</code> <code>anteayer</code></td></tr>
+<tr><td><code>esta semana/mes/año</code></td><td><code>la semana/el mes/el año pasado</code></td></tr>
+<tr><td><code>ya</code> <code>todavía no</code> <code>alguna vez</code> <code>nunca</code></td><td><code>de repente</code> <code>entonces</code> <code>hace dos años</code></td></tr>
+</table>
+<pre>Hoy HE COMIDO paella.               （hoy → perfecto）
+Ayer COMÍ paella.                    （ayer → indefinido）
+¿HAS ESTADO alguna vez en Japón?     （经历 → perfecto）
+Estuve en Japón en 2019.             （具体时间 → indefinido）</pre>
+<div class="callout ct"><div class="callout-title">💡 地区差异</div><strong>西班牙（欧洲）</strong>：偏用perfecto（<em>He comido hoy</em>）<br><strong>拉丁美洲</strong>：偏用indefinido（<em>Comí hoy</em>）</div>`},
+{id:'a2-4',title:'三种过去时对比 ⭐',sub:'indefinido · imperfecto · perfecto',tags:['pasado'],html:`
+<div class="callout ci"><div class="callout-title">⭐ 核心逻辑</div><strong>Indefinido</strong> = 前景动作，推进故事，有始有终<br><strong>Imperfecto</strong> = 背景描写，描述状态，无明确边界<br><strong>Perfecto</strong> = 近期完成，与现在有关联</div>
+<table><tr><th>Indefinido</th><th>Imperfecto</th><th>Perfecto</th></tr>
+<tr><td>完成的单次动作</td><td>持续的背景状态</td><td>近期/有关联</td></tr>
+<tr><td>推进故事</td><td>场景铺垫</td><td>经历（alguna vez）</td></tr>
+<tr><td>改变了某状态</td><td>描述当时的状态</td><td>今天/本周期内</td></tr>
+</table>
+<pre>Cuando ERA pequeño (imp: 背景),
+vivía en un pueblo (imp: 持续状态).
+Un día, mi familia SE MUDÓ a la ciudad (ind: 完成事件).
+Nunca HABÍA VIVIDO en una ciudad grande (pluscuamp.).
+Este año HE VIAJADO mucho (perf).
+Pero el año pasado no SALÍ de España (ind).</pre>`},
+{id:'a2-5',title:'将来时（Futuro imperfecto）',sub:'ir a + inf. · futuro simple · condicional',tags:['verbos','futuro'],html:`
+<h3>ir a + infinitivo（近期计划/即将）</h3>
+<pre>Voy a estudiar esta tarde.
+¿Vas a venir a la fiesta?</pre>
+<h3>规则变位</h3>
+<table><tr><th>人称</th><th>hablar</th><th>comer</th><th>vivir</th></tr>
+<tr><td>yo</td><td><strong class="hi">hablaré</strong></td><td>comeré</td><td>viviré</td></tr>
+<tr><td>tú</td><td>hablarás</td><td>comerás</td><td>vivirás</td></tr>
+<tr><td>él</td><td>hablará</td><td>comerá</td><td>vivirá</td></tr>
+<tr><td>nosotros</td><td>hablaremos</td><td>comeremos</td><td>viviremos</td></tr>
+<tr><td>vosotros</td><td>hablaréis</td><td>comeréis</td><td>viviréis</td></tr>
+<tr><td>ellos</td><td>hablarán</td><td>comerán</td><td>vivirán</td></tr>
+</table>
+<h3>不规则词根</h3>
+<table><tr><th>动词</th><th>词根</th><th>动词</th><th>词根</th></tr>
+<tr><td>haber</td><td>habr-</td><td>tener</td><td>tendr-</td></tr>
+<tr><td>poder</td><td>podr-</td><td>venir</td><td>vendr-</td></tr>
+<tr><td>querer</td><td>querr-</td><td>salir</td><td>saldr-</td></tr>
+<tr><td>saber</td><td>sabr-</td><td>decir</td><td>dir-</td></tr>
+<tr><td>hacer</td><td>har-</td><td>poner</td><td>pondr-</td></tr>
+</table>
+<div class="chips"><span class="chip">mañana</span><span class="chip">pasado mañana</span><span class="chip">el próximo lunes</span><span class="chip">la semana que viene</span><span class="chip">el año que viene</span><span class="chip">dentro de dos días</span></div>
+<pre>Creo que VENDRÁ mañana.
+Imagino que TODO SALDRÁ bien.
+No sé si/cuándo/dónde + futuro:  No sé si VENDRÁ.
+Si + presente → futuro: Si ESTUDIAS, APROBARÁS.</pre>`},
+{id:'a2-6',title:'条件式（Condicional simple）',sub:'morfología · usos',tags:['verbos','condicional'],html:`
+<h3>构成（不规则词根同futuro）</h3>
+<table><tr><th>人称</th><th>hablar</th><th>tener</th></tr>
+<tr><td>yo</td><td><strong class="hi">hablaría</strong></td><td><strong class="hi">tendría</strong></td></tr>
+<tr><td>tú</td><td>hablarías</td><td>tendrías</td></tr>
+<tr><td>él</td><td>hablaría</td><td>tendría</td></tr>
+<tr><td>nosotros</td><td>hablaríamos</td><td>tendríamos</td></tr>
+<tr><td>vosotros</td><td>hablaríais</td><td>tendríais</td></tr>
+<tr><td>ellos</td><td>hablarían</td><td>tendrían</td></tr>
+</table>
+<h3>用法</h3>
+<table><tr><th>用法</th><th>例句</th></tr>
+<tr><td>假设/礼貌请求</td><td><em>¿Podría hablar con el director?</em></td></tr>
+<tr><td>建议（间接）</td><td><em>Yo que tú, estudiaría más.</em></td></tr>
+<tr><td>过去的将来</td><td><em>Dijo que vendría mañana.</em></td></tr>
+<tr><td>条件句主句</td><td><em>Si tuviera tiempo, viajaría.</em></td></tr>
+<tr><td>推测（过去时刻）</td><td><em>En 1900 habría miles de personas.</em></td></tr>
+</table>`},
+{id:'a2-7',title:'比较级与最高级',sub:'comparativos · superlativos · irregulares',tags:['comparativos'],html:`
+<h3>比较级</h3>
+<pre>más + adj/adv + que    → María es más alta que Ana.
+menos + adj/adv + que  → Soy menos rápido que él.
+tan + adj/adv + como   → Soy tan alto como tú.
+tanto/a/os/as + n + como → Tengo tantos libros como tú.</pre>
+<h3>最高级</h3>
+<pre>el/la/los/las + más/menos + adj + de
+→ Es la más inteligente de la clase.</pre>
+<h3>不规则比较级</h3>
+<table><tr><th>形容词</th><th>比较级</th><th>最高级绝对</th></tr>
+<tr><td>bueno</td><td><strong>mejor</strong></td><td>óptimo</td></tr>
+<tr><td>malo</td><td><strong>peor</strong></td><td>pésimo</td></tr>
+<tr><td>grande</td><td><strong>mayor</strong></td><td>máximo</td></tr>
+<tr><td>pequeño</td><td><strong>menor</strong></td><td>mínimo</td></tr>
+</table>`},
+{id:'a2-8',title:'宾语代词（OD / OI）',sub:'pronombres de objeto directo e indirecto',tags:['pronombres'],html:`
+<h3>OD / OI 对照表</h3>
+<table><tr><th>人称</th><th>OD（直接）</th><th>OI（间接）</th></tr>
+<tr><td>yo</td><td>me</td><td>me</td></tr>
+<tr><td>tú</td><td>te</td><td>te</td></tr>
+<tr><td>él/ella</td><td>lo/la</td><td>le (→ se)</td></tr>
+<tr><td>nosotros</td><td>nos</td><td>nos</td></tr>
+<tr><td>vosotros</td><td>os</td><td>os</td></tr>
+<tr><td>ellos/ellas</td><td>los/las</td><td>les (→ se)</td></tr>
+</table>
+<h3>顺序与组合</h3>
+<pre>OI 在前，OD 在后：Te lo doy. / Me la da.
+le/les + lo/la/los/las → SE：Se lo digo. / Se las mando.</pre>
+<h3>代词位置</h3>
+<pre>动词前：         Lo veo. / ¿Me ayudas?
+肯定命令后附加：  Dímelo. / Hazlo. / Siéntate.
+否定命令前置：    No me lo digas. / No lo hagas.
+不定式/动名词：   Voy a verlo. / Lo voy a ver.</pre>`},
+{id:'a2-9',title:'动词短语基础（Perífrasis）',sub:'ir a · poder · tener que · volver a',tags:['perifrasis','verbos'],html:`
+<table><tr><th>结构</th><th>含义</th><th>例句</th></tr>
+<tr><td><strong>ir a</strong> + inf.</td><td>即将/计划</td><td><em>Voy a llamar.</em></td></tr>
+<tr><td><strong>volver a</strong> + inf.</td><td>再次做</td><td><em>Volvió a llamar.</em></td></tr>
+<tr><td><strong>acabar de</strong> + inf.</td><td>刚刚做完</td><td><em>Acabo de llegar.</em></td></tr>
+<tr><td><strong>empezar a</strong> + inf.</td><td>开始做</td><td><em>Empezó a llover.</em></td></tr>
+<tr><td><strong>tener que</strong> + inf.</td><td>必须</td><td><em>Tengo que estudiar.</em></td></tr>
+<tr><td><strong>poder</strong> + inf.</td><td>能够/可能</td><td><em>Puedo hacerlo.</em></td></tr>
+<tr><td><strong>deber</strong> + inf.</td><td>应该（义务）</td><td><em>Debes respetar.</em></td></tr>
+<tr><td><strong>soler</strong> + inf.</td><td>习惯做</td><td><em>Suelo levantarme temprano.</em></td></tr>
+</table>
+<p class="xref">→ B1完整版见 B1-15</p>`},
+{id:'a2-10',title:'关系代词 / 介词后代词',sub:'relativos · pronombres con preposición',tags:['pronombres','relativos'],html:`
+<h3>介词后的代词形式</h3>
+<pre>介词后用重读形式：
+  Hablo de él/ella/usted/ellos.
+  Esto es para ti/mí/él.
+  Voy contigo/conmigo.（特殊：con + mí/ti）</pre>
+<h3>关系从句基础（indicativo）</h3>
+<pre>que → 人与物：
+  El libro QUE compré es bueno.
+  La chica QUE habla chino es mi amiga.
+donde → 地点：
+  La ciudad DONDE nací tiene playa.</pre>
+<p class="xref">→ B1虚拟式用法见 B1-13</p>`},
+{id:'a2-11',title:'话语标记词与连接词',sub:'marcadores del discurso · frecuencia · ya/todavía',tags:['conectores'],html:`
+<h3>时间顺序</h3>
+<div class="chips"><span class="chip">primero</span><span class="chip">luego</span><span class="chip">después</span><span class="chip">entonces</span><span class="chip">finalmente</span><span class="chip">por último</span><span class="chip">al final</span><span class="chip">a continuación</span></div>
+<h3>递进与对比</h3>
+<div class="chips"><span class="chip">además</span><span class="chip">también</span><span class="chip">incluso</span><span class="chip">es más</span><span class="chip">pero</span><span class="chip">sin embargo</span><span class="chip">aunque</span><span class="chip">por otro lado</span></div>
+<h3>原因与结果</h3>
+<div class="chips"><span class="chip">porque</span><span class="chip">por eso</span><span class="chip">así que</span><span class="chip">por tanto</span><span class="chip">ya que</span></div>
+<h3>频率标记词</h3>
+<div class="chips"><span class="chip">siempre</span><span class="chip">normalmente</span><span class="chip">a menudo</span><span class="chip">a veces</span><span class="chip">pocas veces</span><span class="chip">casi nunca</span><span class="chip">nunca</span></div>
+<h3>ya / todavía / aún</h3>
+<div class="callout cn"><div class="callout-title">ya vs. todavía</div><pre>¿Has comido ya?     → ¿Lo hiciste?（期待肯定）
+Sí, ya he comido.   → Sí, lo hice.
+No, todavía no.     → No lo he hecho aún.
+Todavía vive aquí.  → Sigue viviendo aquí.
+Ya no vive aquí.    → Ha dejado de vivir aquí.</pre></div>`},
+{id:'a2-12',title:'命令式（肯定与否定）',sub:'imperativo afirmativo y negativo',tags:['verbos','imperativo'],html:`
+<table><tr><th>人称</th><th>hablar（肯）</th><th>hablar（否）</th></tr>
+<tr><td>tú</td><td class="ok"><strong>habla</strong></td><td class="err">no <strong>hables</strong></td></tr>
+<tr><td>usted</td><td class="ok"><strong>hable</strong></td><td class="err">no <strong>hable</strong></td></tr>
+<tr><td>nosotros</td><td class="ok"><strong>hablemos</strong></td><td class="err">no <strong>hablemos</strong></td></tr>
+<tr><td>vosotros</td><td class="ok"><strong>hablad</strong></td><td class="err">no <strong>habléis</strong></td></tr>
+<tr><td>ustedes</td><td class="ok"><strong>hablen</strong></td><td class="err">no <strong>hablen</strong></td></tr>
+</table>
+<h3>不规则（tú肯定）</h3>
+<div class="chips"><span class="chip">sé</span><span class="chip">ve</span><span class="chip">ten</span><span class="chip">ven</span><span class="chip">haz</span><span class="chip">pon</span><span class="chip">di</span><span class="chip">sal</span></div>
+<pre>肯定 → 代词后置：Dímelo. · Hazlo. · Siéntate.
+否定 → 代词前置：No me lo digas. · No lo hagas.</pre>`}
+],
+b1:[
+{id:'b1-1',title:'过去时态全览',sub:'comparación de todos los pasados',tags:['pasado'],html:`
+<table><tr><th>时态</th><th>核心用法</th><th>标记词</th></tr>
+<tr><td><strong>Presente</strong></td><td>习惯/事实/当前</td><td><code>ahora</code> <code>siempre</code> <code>hoy</code></td></tr>
+<tr><td><strong>Indefinido</strong></td><td>完成的单次事件</td><td><code>ayer</code> <code>en 2020</code> <code>de repente</code></td></tr>
+<tr><td><strong>Imperfecto</strong></td><td>过去习惯/背景描写</td><td><code>antes</code> <code>de niño</code> <code>siempre</code></td></tr>
+<tr><td><strong>Perfecto</strong></td><td>近期完成/有关联</td><td><code>hoy</code> <code>este año</code> <code>ya</code></td></tr>
+<tr><td><strong>Pluscuamperfecto</strong></td><td>过去之前更早发生</td><td><code>ya</code> <code>cuando llegué…</code></td></tr>
+</table>
+<pre>Cuando ERA pequeño (imp: 背景),
+vivía en un pueblo (imp: 持续状态).
+Un día, mi familia SE MUDÓ a la ciudad (ind: 完成事件).
+Nunca HABÍA VIVIDO en una ciudad grande (pluscuamp.).
+¿Recuerdas cuando FUIMOS a París?</pre>`},
+{id:'b1-2',title:'过去完成时（Pluscuamperfecto）',sub:'haber imperfecto + participio',tags:['verbos','pasado'],html:`
+<p><strong>haber（imperfecto）+ participio</strong></p>
+<pre>había / habías / había / habíamos / habíais / habían + participio</pre>
+<table><tr><th>用法</th><th>例句</th></tr>
+<tr><td>过去某时间点之前已发生</td><td><em>Cuando llegué, ya había comido.</em></td></tr>
+<tr><td>解释过去某结果的原因</td><td><em>Estaba cansado porque había trabajado mucho.</em></td></tr>
+<tr><td>叙事"更早过去"</td><td><em>Me contó que había vivido en París.</em></td></tr>
+<tr><td>过去视角的经历</td><td><em>Nunca había visto tanta nieve.</em></td></tr>
+</table>
+<pre>más remoto ←—————————————→ presente
+había llegado → llegué → estoy aquí</pre>`},
+{id:'b1-3',title:'虚拟式现在时',sub:'subjuntivo presente · morfología · WEIRDO',tags:['subjuntivo'],html:`
+<h3>构成：yo现在时去掉-o → + 反向词尾</h3>
+<table><tr><th>人称</th><th>-AR hablar</th><th>-ER/-IR comer</th></tr>
+<tr><td>yo</td><td><strong class="hi">hable</strong></td><td><strong class="hi">coma</strong></td></tr>
+<tr><td>tú</td><td>hables</td><td>comas</td></tr>
+<tr><td>él/ella</td><td>hable</td><td>coma</td></tr>
+<tr><td>nosotros</td><td>hablemos</td><td>comamos</td></tr>
+<tr><td>vosotros</td><td>habléis</td><td>comáis</td></tr>
+<tr><td>ellos</td><td>hablen</td><td>coman</td></tr>
+</table>
+<div class="callout cn"><div class="callout-title">词根继承现在时变化</div>tener→tengo→<strong>tenga</strong> · venir→vengo→<strong>venga</strong><br>hacer→hago→<strong>haga</strong> · pedir→pido→<strong>pida</strong><br>dormir→duermo→<strong>duerma</strong> · decir→digo→<strong>diga</strong></div>
+<h3>不规则（DISHES口诀）</h3>
+<table><tr><th>D</th><th>I</th><th>S</th><th>H</th><th>E</th><th>S</th></tr>
+<tr><td>dar→<strong>dé</strong></td><td>ir→<strong>vaya</strong></td><td>saber→<strong>sepa</strong></td><td>haber→<strong>haya</strong></td><td>estar→<strong>esté</strong></td><td>ser→<strong>sea</strong></td></tr>
+</table>
+<h3>触发条件（WEIRDO）</h3>
+<table><tr><th>类型</th><th>触发词</th><th>例句</th></tr>
+<tr><td><strong>W</strong>ishes</td><td>querer/desear/esperar que</td><td><em>Quiero que <strong>vengas</strong>.</em></td></tr>
+<tr><td><strong>E</strong>motions</td><td>alegrarse/temer/sorprender que</td><td><em>Me alegra que <strong>estés</strong> bien.</em></td></tr>
+<tr><td><strong>I</strong>mpersonal</td><td>es importante/necesario/bueno que</td><td><em>Es vital que <strong>comas</strong>.</em></td></tr>
+<tr><td><strong>R</strong>ecommendations</td><td>recomendar/aconsejar que</td><td><em>Recomiendo que <strong>estudies</strong>.</em></td></tr>
+<tr><td><strong>D</strong>oubt</td><td>dudar/no creer/no pensar que</td><td><em>Dudo que <strong>sea</strong> verdad.</em></td></tr>
+<tr><td><strong>O</strong>jalá</td><td>ojalá</td><td><em>¡Ojalá <strong>llueva</strong>!</em></td></tr>
+</table>
+<div class="callout ci"><div class="callout-title">⭐ 关键规则</div>主语<strong>不同</strong> → 虚拟式：<em>Quiero que <strong>vengas</strong>.</em><br>主语<strong>相同</strong> → 不定式：<em>Quiero <strong>venir</strong>.</em></div>`},
+{id:'b1-4',title:'ser/estar 深化',sub:'personalidad · estados de ánimo',tags:['ser-estar'],html:`
+<h3>ser — 描述性格（形容词列表）</h3>
+<div class="chips"><span class="chip">amable</span><span class="chip">generoso/a</span><span class="chip">tímido/a</span><span class="chip">extrovertido/a</span><span class="chip">responsable</span><span class="chip">impaciente</span><span class="chip">egoísta</span><span class="chip">honesto/a</span><span class="chip">simpático/a</span><span class="chip">antipático/a</span></div>
+<h3>estar — 描述情绪状态</h3>
+<div class="chips"><span class="chip">contento/a</span><span class="chip">triste</span><span class="chip">enfadado/a</span><span class="chip">nervioso/a</span><span class="chip">tranquilo/a</span><span class="chip">agotado/a</span><span class="chip">emocionado/a</span><span class="chip">deprimido/a</span><span class="chip">preocupado/a</span><span class="chip">avergonzado/a</span></div>
+<h3>含义对比（完整版）</h3>
+<table><tr><th>形容词</th><th>ser</th><th>estar</th></tr>
+<tr><td>bueno/malo</td><td>人品好/坏</td><td>食物好吃/生病</td></tr>
+<tr><td>listo</td><td>聪明</td><td>准备好了</td></tr>
+<tr><td>aburrido</td><td>无聊的人</td><td>感到无聊</td></tr>
+<tr><td>rico</td><td>有钱</td><td>味道好</td></tr>
+<tr><td>vivo</td><td>机灵</td><td>还活着</td></tr>
+<tr><td>seguro</td><td>安全的</td><td>他确信</td></tr>
+</table>`},
+{id:'b1-5',title:'意见动词与强调',sub:'creer · pensar · opinar · intensificadores',tags:['subjuntivo','opinion'],html:`
+<div class="callout cn"><div class="callout-title">关键区分</div><strong>肯定</strong>意见 → <strong>indicativo</strong> / <strong>否定</strong>意见 → <strong>subjuntivo</strong></div>
+<table><tr><th>结构</th><th>例句</th></tr>
+<tr><td>creer/pensar/opinar que + <strong>ind.</strong></td><td><em>Creo que <strong>tiene</strong> razón.</em></td></tr>
+<tr><td>no creer/pensar que + <strong>subj.</strong></td><td><em>No creo que <strong>tenga</strong> razón.</em></td></tr>
+<tr><td>(me) parece que + <strong>ind.</strong></td><td><em>Me parece que <strong>estás</strong> cansado.</em></td></tr>
+<tr><td>(me) parece bien/mal que + <strong>subj.</strong></td><td><em>Me parece bien que <strong>vengas</strong>.</em></td></tr>
+</table>
+<h3>Intensificadores de opinión</h3>
+<div class="chips"><span class="chip">absolutamente</span><span class="chip">totalmente</span><span class="chip">completamente</span><span class="chip">sinceramente</span><span class="chip">realmente</span><span class="chip">francamente</span></div>
+<h3>Acuerdo / Desacuerdo</h3>
+<pre>Acuerdo：Estoy de acuerdo. / Tienes razón. / Es verdad.
+Desacuerdo：No estoy de acuerdo. / No lo veo así.
+Parcial：Sí, pero… / Es cierto que…, sin embargo…</pre>`},
+{id:'b1-6',title:'评价表达 + inf./subj.',sub:'expresiones de valoración',tags:['subjuntivo','valoracion'],html:`
+<table><tr><th>结构</th><th>同主语 → inf.</th><th>不同主语 → que + subj.</th></tr>
+<tr><td>Es importante…</td><td><em>…estudiar.</em></td><td><em>…que estudies.</em></td></tr>
+<tr><td>Es necesario…</td><td><em>…descansar.</em></td><td><em>…que descanses.</em></td></tr>
+<tr><td>Es bueno/malo…</td><td><em>…hacer ejercicio.</em></td><td><em>…que hagas ejercicio.</em></td></tr>
+<tr><td>Es una pena…</td><td><em>…perder el tiempo.</em></td><td><em>…que pierdas el tiempo.</em></td></tr>
+<tr><td>Me parece bien/mal…</td><td><em>…ir.</em></td><td><em>…que vayas.</em></td></tr>
+</table>`},
+{id:'b1-7',title:'愿望 / 建议 / 请求',sub:'deseos · consejos · ruegos · ojalá',tags:['subjuntivo'],html:`
+<h3>Recomendaciones</h3>
+<pre>Te recomiendo/aconsejo + que + subj.:
+  Te recomiendo que DESCANSES más.
++ infinitivo（同主语）: Te recomiendo DESCANSAR más.</pre>
+<h3>Esperanza / Deseo</h3>
+<pre>Espero/Deseo/Quiero + que + subj.:
+  Espero que TODO SALGA bien.
++ infinitivo: Espero VERTE pronto.</pre>
+<h3>Peticiones / Prohibiciones</h3>
+<pre>Te pido/ruego + que + subj.:  Te pido que SEAS más puntual.
+Te prohíbo + que + subj.:     Te prohíbo que SALGAS esta noche.</pre>
+<h3>Ojalá / Que + subjuntivo</h3>
+<pre>Ojalá + subj. presente         → ¡Ojalá APRUEBE el examen!
+Ojalá + subj. imperfecto       → ¡Ojalá TUVIERA más tiempo!
+Ojalá + subj. pluscuamperfecto → ¡Ojalá HUBIERA ESTUDIADO más!
+Que + subj. → ¡Que TENGAS mucha suerte! / ¡Que SE MEJORE!</pre>`},
+{id:'b1-8',title:'推测与可能性',sub:'probabilidad · quizás · a lo mejor',tags:['probabilidad'],html:`
+<h3>quizás / tal vez / probablemente / posiblemente</h3>
+<pre>+ indicativo  → mayor seguridad
++ subjuntivo  → menor seguridad
+Quizás VIENE mañana.（probable）/ Quizás VENGA.（posible）</pre>
+<h3>Siempre + subjuntivo</h3>
+<pre>Puede (ser) que + subj.:  Puede que TENGA razón.
+Es posible que + subj.:   Es posible que VENGAN.
+Es probable que + subj.:  Es probable que LLUEVA.</pre>
+<h3>Siempre + indicativo</h3>
+<pre>A lo mejor + ind.:   A lo mejor VIENE mañana.
+Igual + ind.:        Igual LLEGA tarde.
+Lo mismo + ind.:     Lo mismo NO VIENE.</pre>
+<div class="callout ct"><div class="callout-title">💡 口诀</div><strong>a lo mejor / igual / lo mismo</strong> → siempre <strong>indicativo</strong><br><strong>puede que / es posible/probable que</strong> → siempre <strong>subjuntivo</strong><br><strong>quizás / tal vez</strong> → 两者均可（subj. = 更不确定）</div>`},
+{id:'b1-9',title:'命令式（B1完整）',sub:'imperativo · usted/ustedes · pronombres',tags:['imperativo'],html:`
+<div class="callout cn"><div class="callout-title">B1 重点</div>usted/ustedes 形式 + 代词组合</div>
+<table><tr><th>人称</th><th>hablar（肯）</th><th>hablar（否）</th></tr>
+<tr><td>tú</td><td class="ok"><strong>habla</strong></td><td class="err">no <strong>hables</strong></td></tr>
+<tr><td>usted</td><td class="ok"><strong>hable</strong></td><td class="err">no <strong>hable</strong></td></tr>
+<tr><td>nosotros</td><td class="ok"><strong>hablemos</strong></td><td class="err">no <strong>hablemos</strong></td></tr>
+<tr><td>vosotros</td><td class="ok"><strong>hablad</strong></td><td class="err">no <strong>habléis</strong></td></tr>
+<tr><td>ustedes</td><td class="ok"><strong>hablen</strong></td><td class="err">no <strong>hablen</strong></td></tr>
+</table>
+<div class="chips"><span class="chip">sé</span><span class="chip">ve</span><span class="chip">ten</span><span class="chip">ven</span><span class="chip">haz</span><span class="chip">pon</span><span class="chip">di</span><span class="chip">sal</span></div>
+<pre>肯定 → 代词后置：Dímelo. · Dáselo. · Siéntate.
+否定 → 代词前置：No me lo digas. · No se lo des.</pre>`},
+{id:'b1-10',title:'时间从句',sub:'oraciones temporales · indicativo vs. subjuntivo',tags:['conectores','subjuntivo'],html:`
+<h3>时态选择规则</h3>
+<table><tr><th>主句指向</th><th>连词后时态</th><th>例句</th></tr>
+<tr><td>过去</td><td><strong>indicativo</strong></td><td><em>Cuando llegué, te llamé.</em></td></tr>
+<tr><td>现在（习惯）</td><td><strong>indicativo</strong></td><td><em>Cuando llego, como.</em></td></tr>
+<tr><td>未来</td><td><strong>subjuntivo</strong></td><td><em>Cuando llegues, llámame.</em></td></tr>
+</table>
+<table><tr><th>连词</th><th>含义</th><th>时态</th><th>例句</th></tr>
+<tr><td>cuando</td><td>当…时</td><td>ind./subj.</td><td><em>Cuando seas mayor, lo entenderás.</em></td></tr>
+<tr><td>mientras (tanto)</td><td>同时/只要</td><td>ind./subj.</td><td><em>Mientras estudias, no uses el móvil.</em></td></tr>
+<tr><td>desde que</td><td>自从</td><td>ind.</td><td><em>Desde que llegué, me siento bien.</em></td></tr>
+<tr><td>hasta que</td><td>直到</td><td>ind./subj.</td><td><em>Espera hasta que termine.</em></td></tr>
+<tr><td>antes de (que)</td><td>…之前</td><td>inf./subj.</td><td><em>Llámame antes de salir.</em></td></tr>
+<tr><td>en cuanto / tan pronto como</td><td>一…就…</td><td>ind./subj.</td><td><em>En cuanto llegue, te aviso.</em></td></tr>
+<tr><td>nada más</td><td>一…就…（口语）</td><td>+ inf.</td><td><em>Nada más llegar, me llamó.</em></td></tr>
+<tr><td>cada vez que</td><td>每次</td><td>ind.</td><td><em>Cada vez que llueve, se inunda.</em></td></tr>
+</table>`},
+{id:'b1-11',title:'原因从句',sub:'oraciones causales · conectores',tags:['conectores'],html:`
+<table><tr><th>连词</th><th>特点</th><th>例句</th></tr>
+<tr><td><strong>porque</strong></td><td>最常用</td><td><em>No fui porque estaba enfermo.</em></td></tr>
+<tr><td><strong>como</strong></td><td>原因在句首</td><td><em>Como llovía, me quedé.</em></td></tr>
+<tr><td><strong>ya que</strong></td><td>原因已知</td><td><em>Ya que estás aquí, ayúdame.</em></td></tr>
+<tr><td><strong>puesto que</strong></td><td>书面，显然原因</td><td><em>Puesto que lo sabes, actúa.</em></td></tr>
+<tr><td><strong>dado que</strong></td><td>书面，前提条件</td><td><em>Dado que no hay tiempo…</em></td></tr>
+<tr><td><strong>debido a (que)</strong></td><td>正式书面</td><td><em>Cerrado debido a obras.</em></td></tr>
+</table>
+<h3>否定原因结构</h3>
+<pre>No + hecho + no es que/no porque + subj.,
+sino que/es que/es porque + ind.
+→ No salí, no porque TUVIERA miedo, sino porque ESTABA cansado.</pre>`},
+{id:'b1-12',title:'结果从句',sub:'oraciones consecutivas · intensificativas',tags:['conectores'],html:`
+<table><tr><th>连词</th><th>例句</th></tr>
+<tr><td><strong>por eso</strong></td><td><em>Llovía, por eso me quedé.</em></td></tr>
+<tr><td><strong>así que</strong></td><td><em>Era tarde, así que me fui.</em></td></tr>
+<tr><td><strong>por lo tanto</strong></td><td><em>No hay entradas; por lo tanto, no podemos ir.</em></td></tr>
+<tr><td><strong>de modo/manera que</strong></td><td><em>Habla de modo que todos entiendan.</em></td></tr>
+<tr><td><strong>de ahí que</strong></td><td><em>No come, de ahí que esté delgado.</em> (+ subj.)</td></tr>
+<tr><td><strong>por consiguiente</strong></td><td><em>No estudió; por consiguiente, suspendió.</em></td></tr>
+</table>
+<h3>强调程度的结果句</h3>
+<pre>tanto/a/os/as + nombre + que:  Tenía TANTO SUEÑO que no podía hablar.
+tan + adj/adv + que:           Era TAN CANSADO que se durmió de pie.
+verbo + tanto + que:           Estudió TANTO que se quedó sin voz.</pre>`},
+{id:'b1-13',title:'关系从句：陈述式与虚拟式',sub:'relativos · antecedente conocido vs. desconocido',tags:['relativos','subjuntivo'],html:`
+<div class="callout ci"><div class="callout-title">⭐ 核心规则</div>前置词<strong>已知/特指</strong> → <strong>indicativo</strong><br>前置词<strong>未知/泛指/不存在</strong> → <strong>subjuntivo</strong></div>
+<table><tr><th>情况</th><th>语法</th><th>例句</th></tr>
+<tr><td>特指已知</td><td>indicativo</td><td><em>Busco al chico que trabaja aquí.</em></td></tr>
+<tr><td>泛指未知</td><td>subjuntivo</td><td><em>Busco un chico que trabaje aquí.</em></td></tr>
+<tr><td>否定（不存在）</td><td>subjuntivo</td><td><em>No hay nadie que sepa la respuesta.</em></td></tr>
+<tr><td>donde（已知）</td><td>indicativo</td><td><em>El lugar donde vivía era bonito.</em></td></tr>
+<tr><td>donde（未知）</td><td>subjuntivo</td><td><em>Busco un lugar donde pueda descansar.</em></td></tr>
+</table>
+<pre>Tengo un piso que TIENE terraza.  （ind.: ya existe）
+Quiero un piso que TENGA terraza. （subj.: hipotético）</pre>`},
+{id:'b1-14',title:'感谢与道歉',sub:'agradecimiento · disculpa',tags:['interaccion'],html:`
+<h3>Agradecer（感谢）</h3>
+<pre>Muchas gracias por + inf./nombre:
+  Gracias por ayudarme. / Gracias por tu tiempo.
+Te agradezco que + subj.:
+  Te agradezco que hayas venido.</pre>
+<h3>Disculparse（道歉）</h3>
+<pre>Perdona/Perdone que + subj.:  Perdona que llegue tarde.
+Lo siento (mucho / de verdad).
+Siento + inf. / que + subj.:
+  Siento haberte molestado.
+  Siento que hayas tenido que esperar.
+Disculpe las molestias. / Ha sido culpa mía.</pre>`},
+{id:'b1-15',title:'动词短语（完整版）',sub:'perífrasis verbales de infinitivo y gerundio',tags:['perifrasis','verbos'],html:`
+<h3>De infinitivo</h3>
+<table><tr><th>结构</th><th>含义</th><th>例句</th></tr>
+<tr><td><strong>deber</strong> + inf.</td><td>义务（强）</td><td><em>Debes estudiar más.</em></td></tr>
+<tr><td><strong>deber de</strong> + inf.</td><td>推测</td><td><em>Debe de ser tarde.</em></td></tr>
+<tr><td><strong>tener que</strong> + inf.</td><td>义务</td><td><em>Tengo que ir al médico.</em></td></tr>
+<tr><td><strong>hay que</strong> + inf.</td><td>义务（非人称）</td><td><em>Hay que respetar las normas.</em></td></tr>
+<tr><td><strong>estar a punto de</strong></td><td>即将发生</td><td><em>Estaba a punto de salir.</em></td></tr>
+<tr><td><strong>dejar de</strong> + inf.</td><td>停止做</td><td><em>He dejado de fumar.</em></td></tr>
+<tr><td><strong>ponerse a</strong> + inf.</td><td>开始（突然）</td><td><em>Se puso a llorar de repente.</em></td></tr>
+<tr><td><strong>volver a</strong> + inf.</td><td>再次做</td><td><em>Volvió a llamar.</em></td></tr>
+<tr><td><strong>acabar de</strong> + inf.</td><td>刚刚做完</td><td><em>Acabo de llegar.</em></td></tr>
+<tr><td><strong>ir a</strong> + inf.</td><td>即将/计划</td><td><em>Voy a estudiar esta tarde.</em></td></tr>
+<tr><td><strong>empezar a</strong> + inf.</td><td>开始做</td><td><em>Empezó a llover.</em></td></tr>
+</table>
+<h3>De gerundio</h3>
+<table><tr><th>结构</th><th>含义</th><th>例句</th></tr>
+<tr><td><strong>estar</strong> + ger.</td><td>进行时</td><td><em>Estoy leyendo.</em></td></tr>
+<tr><td><strong>seguir</strong> + ger.</td><td>继续做</td><td><em>Sigue lloviendo.</em></td></tr>
+<tr><td><strong>llevar</strong> + tiempo + ger.</td><td>持续时长</td><td><em>Llevo 2h esperando.</em></td></tr>
+<tr><td><strong>ir</strong> + ger.</td><td>逐渐…</td><td><em>Va mejorando poco a poco.</em></td></tr>
+<tr><td><strong>andar</strong> + ger.</td><td>到处…（略负面）</td><td><em>Anda buscando problemas.</em></td></tr>
+</table>`},
+{id:'b1-16',title:'高级连接词',sub:'conectores B1 · adición · contraste · referencia',tags:['conectores'],html:`
+<h3>递进（Adición）</h3>
+<table><tr><th>连词</th><th>含义</th><th>例句</th></tr>
+<tr><td><strong>además</strong></td><td>而且/另外</td><td><em>Es barato y, además, bueno.</em></td></tr>
+<tr><td><strong>también</strong></td><td>也</td><td><em>Yo también lo creo.</em></td></tr>
+<tr><td><strong>igualmente</strong></td><td>同样地</td><td><em>Igualmente, debemos considerar…</em></td></tr>
+<tr><td><strong>encima</strong></td><td>更有甚者（负面）</td><td><em>Llegó tarde y encima no se disculpó.</em></td></tr>
+<tr><td><strong>es más</strong></td><td>更进一步</td><td><em>Es bueno, es más, es excelente.</em></td></tr>
+<tr><td><strong>incluso / hasta</strong></td><td>甚至</td><td><em>Incluso los expertos se equivocan.</em></td></tr>
+</table>
+<h3>对比/让步/解释</h3>
+<table><tr><th>连词</th><th>例句</th></tr>
+<tr><td><strong>sin embargo</strong></td><td><em>Es caro; sin embargo, lo compré.</em></td></tr>
+<tr><td><strong>aunque</strong></td><td><em>Aunque llueva, saldré.</em></td></tr>
+<tr><td><strong>a pesar de que</strong></td><td><em>A pesar de que llovía, salió.</em></td></tr>
+<tr><td><strong>es que</strong></td><td><em>No fui, es que estaba enfermo.</em></td></tr>
+<tr><td><strong>o sea / en definitiva</strong></td><td><em>En definitiva, hay que actuar.</em></td></tr>
+<tr><td><strong>referente a / respecto a</strong></td><td><em>Referente a tu pregunta…</em></td></tr>
+<tr><td><strong>finalmente / por último</strong></td><td><em>Finalmente, llegamos a un acuerdo.</em></td></tr>
+</table>
+<div class="callout cn"><div class="callout-title">aunque — 两种用法</div><em>Aunque <strong>llueve</strong> (事实), salgo.</em> → indicativo<br><em>Aunque <strong>llueva</strong> (假设), saldré.</em> → subjuntivo</div>`},
+{id:'b1-17',title:'感情动词',sub:'sentimientos y sensaciones · inf. vs. subj.',tags:['valoracion','subjuntivo'],html:`
+<table><tr><th>动词</th><th>+ infinitivo</th><th>+ que + subj.</th></tr>
+<tr><td><strong>gustar / encantar</strong></td><td><em>Me gusta viajar.</em></td><td><em>Me gusta que vengas.</em></td></tr>
+<tr><td><strong>molestar / fastidiar</strong></td><td><em>Me molesta esperar.</em></td><td><em>Me molesta que llegues tarde.</em></td></tr>
+<tr><td><strong>odiar</strong></td><td><em>Odio mentir.</em></td><td><em>Odio que me interrumpan.</em></td></tr>
+<tr><td><strong>irritar</strong></td><td><em>Me irrita repetirlo.</em></td><td><em>Me irrita que no escuches.</em></td></tr>
+<tr><td><strong>entristecer / alegrar</strong></td><td><em>Me entristece verlo.</em></td><td><em>Me alegra que hayas venido.</em></td></tr>
+<tr><td><strong>dar vergüenza</strong></td><td><em>Me da vergüenza decirlo.</em></td><td><em>Me da vergüenza que lo vean.</em></td></tr>
+<tr><td><strong>es intolerable</strong></td><td><em>Es intolerable mentir.</em></td><td><em>Es intolerable que mientan.</em></td></tr>
+<tr><td><strong>preocupar</strong></td><td><em>Me preocupa fallar.</em></td><td><em>Me preocupa que no llegues.</em></td></tr>
+</table>`},
+{id:'b1-18',title:'se 的各种用法',sub:'usos de se · reflexivo · impersonal · pasivo',tags:['pronombres'],html:`
+<table><tr><th>用法</th><th>例句</th><th>说明</th></tr>
+<tr><td><strong>Reflexivo</strong></td><td><em>Se lava las manos.</em></td><td>动作施于自身</td></tr>
+<tr><td><strong>Recíproco</strong></td><td><em>Se quieren mucho.</em></td><td>两者互相</td></tr>
+<tr><td><strong>Pasivo reflejo</strong></td><td><em>Se venden pisos.</em></td><td>被动（有主语）</td></tr>
+<tr><td><strong>Impersonal</strong></td><td><em>Se dice que…</em></td><td>主语不明确</td></tr>
+<tr><td><strong>Cambio de estado</strong></td><td><em>Se puso nervioso.</em></td><td>变得…</td></tr>
+<tr><td><strong>OI → SE</strong></td><td><em>Se lo dije.</em></td><td>le/les + lo/la → se</td></tr>
+<tr><td><strong>Aspectual</strong></td><td><em>Se comió todo el pastel.</em></td><td>强调完成</td></tr>
+</table>
+<div class="chips"><span class="chip">irse</span><span class="chip">quedarse</span><span class="chip">ponerse</span><span class="chip">volverse</span><span class="chip">hacerse</span><span class="chip">caerse</span><span class="chip">acordarse de</span><span class="chip">olvidarse de</span></div>`},
+{id:'b1-19',title:'不定代词 / 指小词',sub:'indefinidos · diminutivos',tags:['pronombres'],html:`
+<h3>Pronombres indefinidos</h3>
+<table><tr><th>类型</th><th>肯定</th><th>否定/疑问</th></tr>
+<tr><td>人</td><td>alguien</td><td>nadie</td></tr>
+<tr><td>物</td><td>algo</td><td>nada</td></tr>
+<tr><td>修饰阳名词</td><td>algún</td><td>ningún</td></tr>
+<tr><td>修饰阴名词</td><td>alguna</td><td>ninguna</td></tr>
+</table>
+<h3>Diminutivos（指小词）</h3>
+<table><tr><th>后缀</th><th>例</th><th>用法</th></tr>
+<tr><td><strong>-ito/a</strong></td><td>casita, cafecito, problemita</td><td>亲昵/小/委婉</td></tr>
+<tr><td><strong>-illo/a</strong></td><td>panillo, chiquillo</td><td>亲切或轻视</td></tr>
+</table>`},
+{id:'b1-20',title:'冠词深化 / por·para',sub:'artículo B1 · contraste por/para · finalidad',tags:['articulos','preposiciones'],html:`
+<h3>定冠词特殊用法（B1）</h3>
+<table><tr><th>用法</th><th>例句</th></tr>
+<tr><td>类别泛指</td><td><em>Los perros son fieles.</em></td></tr>
+<tr><td>事件地点（ser）</td><td><em>La fiesta <strong>es</strong> en el auditorio.</em></td></tr>
+<tr><td>身体部位</td><td><em>Me duele <strong>la</strong> cabeza.</em></td></tr>
+<tr><td>重量/价格</td><td><em>Cuesta 3€ <strong>el</strong> kilo.</em></td></tr>
+</table>
+<h3>por / para 对比</h3>
+<table><tr><th>POR</th><th>PARA</th></tr>
+<tr><td>原因：<em>Lo hice por ti.</em></td><td>目的：<em>Estudio para aprender.</em></td></tr>
+<tr><td>持续时间：<em>por dos horas</em></td><td>期限：<em>para el lunes</em></td></tr>
+<tr><td>交换：<em>Te lo cambio por este.</em></td><td>Destino：<em>Salgo para Madrid.</em></td></tr>
+<tr><td>Agente：<em>Escrito por Cervantes.</em></td><td>Destinatario：<em>Es para ti.</em></td></tr>
+<tr><td>Movimiento：<em>Pasé por tu calle.</em></td><td>Opinión：<em>Para mí, es fácil.</em></td></tr>
+</table>
+<h3>目的连词（Conectores de finalidad）</h3>
+<pre>para (que) + subj./inf.:
+  Estudio PARA aprender.              （同主语）
+  Te explico PARA QUE ENTIENDAS.      （不同主语）
+a fin de (que) / con el fin de (que) + subj./inf.</pre>`},
+{id:'b1-21',title:'未来完成时',sub:'futuro perfecto · contraste con futuro simple',tags:['futuro'],html:`
+<p><strong>habré / habrás / habrá / habremos / habréis / habrán + participio</strong></p>
+<table><tr><th>情境</th><th>例句</th></tr>
+<tr><td>未来某时间点前已完成</td><td><em>Para el viernes, habré terminado.</em></td></tr>
+<tr><td>对过去的推测</td><td><em>No ha llamado; habrá estado ocupado.</em></td></tr>
+</table>
+<table><tr><th>时态</th><th>推测对象</th><th>例句</th></tr>
+<tr><td>Futuro simple</td><td>现在</td><td><em>Serán las tres.</em></td></tr>
+<tr><td>Futuro perfecto</td><td>过去已完成</td><td><em>Ya habrá llegado.</em></td></tr>
+<tr><td>Condicional</td><td>过去某时刻</td><td><em>Tendría unos 40 años.</em></td></tr>
+</table>`}
+],
+b2:[
+{id:'b2-1',title:'条件句三类 ⭐',sub:'condicionales real · irreal presente · irreal pasado',tags:['subjuntivo','condicional'],html:`
+<table><tr><th>类型</th><th>si 从句</th><th>主句</th><th>例句</th></tr>
+<tr><td class="ok"><strong>现实（可能）</strong></td><td>si + presente</td><td>futuro/presente</td><td><em>Si vienes, te ayudo.</em></td></tr>
+<tr><td class="wt"><strong>非现实（现在）</strong></td><td>si + subj. imperfecto</td><td>condicional</td><td><em>Si viniera, te ayudaría.</em></td></tr>
+<tr><td class="err"><strong>非现实（过去）</strong></td><td>si + subj. pluscuamperfecto</td><td>cond. compuesto</td><td><em>Si hubiera venido, te habría ayudado.</em></td></tr>
+</table>
+<pre>Si TUVIERA dinero, VIAJARÍA por el mundo.
+Si FUERA presidente, CAMBIARÍA las leyes.
+Si HUBIERA ESTUDIADO más, HABRÍA APROBADO.
+Si no HUBIERA LLOVIDO, HABRÍAMOS SALIDO.</pre>`},
+{id:'b2-2',title:'虚拟式过去时',sub:'subjuntivo imperfecto · concordancia temporal',tags:['subjuntivo'],html:`
+<table><tr><th>人称</th><th>-ra（常用）</th><th>-se（书面）</th></tr>
+<tr><td>yo</td><td>hablara</td><td>hablase</td></tr>
+<tr><td>tú</td><td>hablaras</td><td>hablases</td></tr>
+<tr><td>él/ella</td><td>hablara</td><td>hablase</td></tr>
+<tr><td>nosotros</td><td>habláramos</td><td>hablásemos</td></tr>
+<tr><td>vosotros</td><td>hablarais</td><td>hablaseis</td></tr>
+<tr><td>ellos</td><td>hablaran</td><td>hablasen</td></tr>
+</table>
+<div class="callout cn"><div class="callout-title">词根规律</div>3ª pl. indefinido → quitar -ron：hablaron→habla- / tuvieron→tuvie-</div>
+<h3>Concordancia temporal</h3>
+<table><tr><th>主句时态</th><th>从句虚拟式</th></tr>
+<tr><td>现在/将来/命令</td><td>subj. <strong>presente</strong></td></tr>
+<tr><td>过去/条件式</td><td>subj. <strong>imperfecto</strong></td></tr>
+</table>
+<pre>Quiero  que VENGAS.    （现在）
+Quería  que VINIERAS.  （过去）</pre>
+<h3>Subjuntivo pluscuamperfecto</h3>
+<pre>hubiera / hubiese + participio
+Si hubiera sabido…  / Esperaba que hubiera llegado.</pre>`},
+{id:'b2-3',title:'间接引语',sub:'estilo indirecto · cambios de tiempo verbal',tags:['estilo-indirecto'],html:`
+<h3>时态变化（引语在过去）</h3>
+<table><tr><th>直接引语</th><th>间接引语（过去）</th></tr>
+<tr><td>presente</td><td>→ imperfecto</td></tr>
+<tr><td>indefinido / perfecto</td><td>→ pluscuamperfecto</td></tr>
+<tr><td>futuro</td><td>→ condicional</td></tr>
+<tr><td>imperativo</td><td>→ subj. imperfecto</td></tr>
+</table>
+<h3>时间/地点词变化</h3>
+<table><tr><th>直接</th><th>间接</th></tr>
+<tr><td>hoy</td><td>ese día / aquel día</td></tr>
+<tr><td>mañana</td><td>al día siguiente</td></tr>
+<tr><td>ayer</td><td>el día anterior</td></tr>
+<tr><td>aquí</td><td>allí / allá</td></tr>
+<tr><td>ahora</td><td>entonces / en ese momento</td></tr>
+</table>
+<pre>decir que   → Dijo que vendría.
+pedir que   → Pidió que lo ayudara. (subj.)
+preguntar si → Preguntó si sabía.</pre>`},
+{id:'b2-4',title:'被动语态',sub:'voz pasiva · ser/ser/estar + participio',tags:['pasiva'],html:`
+<h3>ser + participio（正式被动）</h3>
+<pre>El libro FUE ESCRITO POR Cervantes.
+Las leyes SERÁN APROBADAS POR el parlamento.</pre>
+<div class="callout cw"><div class="callout-title">⚠ 分词性数一致</div>El libro fue escrit<strong>o</strong> / Las cartas fueron escrit<strong>as</strong></div>
+<table><tr><th>结构</th><th>例句</th><th>说明</th></tr>
+<tr><td>se + v. 3ª pl.</td><td><em>Se venden pisos.</em></td><td>被动（有主语）</td></tr>
+<tr><td>se + v. 3ª sing.</td><td><em>Se dice que…</em></td><td>非人称</td></tr>
+<tr><td>estar + participio</td><td><em>La puerta <strong>está</strong> cerrada.</em></td><td>结果状态</td></tr>
+</table>`},
+{id:'b2-5',title:'高级结构',sub:'infinitivo · gerundio avanzado',tags:['perifrasis'],html:`
+<h3>不定式高级结构</h3>
+<table><tr><th>结构</th><th>含义</th><th>例句</th></tr>
+<tr><td>al + inf.</td><td>一…就…</td><td><em>Al llegar, llamé.</em></td></tr>
+<tr><td>sin + inf.</td><td>没有做…</td><td><em>Se fue sin decir nada.</em></td></tr>
+<tr><td>después de + inf.</td><td>…之后</td><td><em>Después de comer, descansé.</em></td></tr>
+<tr><td>antes de + inf.</td><td>…之前</td><td><em>Antes de salir, cierra.</em></td></tr>
+<tr><td>por + inf.</td><td>出于…（原因）</td><td><em>Lo hice por ayudar.</em></td></tr>
+</table>
+<h3>Gerundio 高级</h3>
+<table><tr><th>结构</th><th>例句</th></tr>
+<tr><td>seguir + ger.</td><td><em>Sigue lloviendo.</em></td></tr>
+<tr><td>llevar + tiempo + ger.</td><td><em>Llevo 2h esperando.</em></td></tr>
+<tr><td>ir + ger.</td><td><em>Va mejorando poco a poco.</em></td></tr>
+<tr><td>gerundio solo（方式）</td><td><em>Cantando se aprende.</em></td></tr>
+</table>`},
+{id:'b2-6',title:'高级连接词',sub:'conectores B2 · concesión · relativos avanzados',tags:['conectores'],html:`
+<h3>让步连词</h3>
+<table><tr><th>连词</th><th>例句</th></tr>
+<tr><td><strong>aunque</strong></td><td><em>Aunque llueva, saldré.</em></td></tr>
+<tr><td><strong>a pesar de que</strong></td><td><em>A pesar de que llovía, salió.</em></td></tr>
+<tr><td><strong>por más que</strong> + subj.</td><td><em>Por más que estudie, no aprueba.</em></td></tr>
+<tr><td><strong>aun cuando</strong></td><td><em>Aun cuando fuera difícil, lo haría.</em></td></tr>
+<tr><td><strong>si bien</strong></td><td><em>Si bien es caro, lo vale.</em></td></tr>
+</table>
+<div class="chips"><span class="chip">sin embargo</span><span class="chip">no obstante</span><span class="chip">sino (que)</span><span class="chip">a menos que + subj.</span><span class="chip">siempre que + subj.</span><span class="chip">con tal de que + subj.</span></div>
+<h3>高级关系从句</h3>
+<table><tr><th>结构</th><th>例句</th></tr>
+<tr><td>cuyo/a/os/as</td><td><em>El autor cuya novela ganó…</em></td></tr>
+<tr><td>lo que（中性）</td><td><em>Lo que me dijiste fue útil.</em></td></tr>
+<tr><td>el/la cual</td><td><em>La razón por la cual vine…</em></td></tr>
+</table>`},
+{id:'b2-7',title:'条件式用法总结',sub:'condicional simple · usos avanzados',tags:['condicional'],html:`
+<table><tr><th>用法</th><th>例句</th></tr>
+<tr><td>假设/礼貌请求</td><td><em>¿Podría hablar con el director?</em></td></tr>
+<tr><td>过去的将来</td><td><em>Dijo que vendría mañana.</em></td></tr>
+<tr><td>建议（间接）</td><td><em>Yo que tú, estudiaría más.</em></td></tr>
+<tr><td>条件句主句</td><td><em>Si tuviera tiempo, viajaría.</em></td></tr>
+<tr><td>推测（过去时刻）</td><td><em>En 1900 habría miles de personas.</em></td></tr>
+</table>`}
+]
+};
+
+let curLevel = 'a1', curSec = 'a1-1';
+
+function switchLevel(lv, btn) {
+  curLevel = lv;
+  document.querySelectorAll('.lt').forEach(b => b.classList.remove('on'));
+  btn.classList.add('on');
+  document.getElementById('search').value = '';
+  buildSidebar(lv);
+  showSec(SECTIONS[lv][0].id);
+}
+
+function buildSidebar(lv, filter) {
+  const list = document.getElementById('sec-list');
+  list.innerHTML = '';
+  SECTIONS[lv].forEach((sec, i) => {
+    const el = document.createElement('div');
+    const match = !filter || sec.title.toLowerCase().includes(filter) || (sec.sub && sec.sub.toLowerCase().includes(filter)) || sec.tags.some(t => t.includes(filter));
+    el.className = 'sec-item' + (sec.id === curSec ? ' on' : '') + (match ? '' : ' hidden');
+    el.dataset.id = sec.id;
+    el.innerHTML = `<span class="sec-num">${lv.toUpperCase()}-${i+1}</span>${sec.title}`;
+    el.onclick = () => showSec(sec.id);
+    list.appendChild(el);
+  });
+}
+
+function filterSecs(val) {
+  const f = val.toLowerCase().trim();
+  buildSidebar(curLevel, f || null);
+}
+
+function showSec(id) {
+  curSec = id;
+  const lv = id.split('-')[0];
+  const sec = SECTIONS[lv].find(s => s.id === id);
+  if (!sec) return;
+  document.querySelectorAll('.sec-item').forEach(el => el.classList.toggle('on', el.dataset.id === id));
+  const tagsHtml = [`<span class="tag nivel">#nivel/${lv}</span>`, ...sec.tags.map(t => `<span class="tag tema">#${t}</span>`)].join('');
+  document.getElementById('content').innerHTML =
+    `<div class="sec-title">${sec.title}</div>
+     ${sec.sub ? `<div class="sec-sub">${sec.sub}</div>` : ''}
+     <div class="sec-tags">${tagsHtml}</div>
+     ${sec.html}`;
+  document.querySelector('.main').scrollTo(0,0);
+}
+
+buildSidebar('a1');
+showSec('a1-1');
+</script>
+</body>
+</html>
